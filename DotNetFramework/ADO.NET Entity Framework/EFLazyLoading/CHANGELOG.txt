@@ -1,0 +1,9 @@
+2008/05/12 - v0.5
+	Initial release
+
+2008/05/23 - v0.51
+	Regenerated pre-compiled views file for VS2008 SP1 Beta.
+
+2008/08/08 - v0.52
+	Updated for VS2008 RTM.
+        Removed generated files from the package - now always re-generating them.

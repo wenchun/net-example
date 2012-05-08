@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterStatusDemo", "PrinterStatusDemo.csproj", "{BA0E71DB-25AE-4699-BBC1-AB9C23C462C6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BA0E71DB-25AE-4699-BBC1-AB9C23C462C6}.Debug.ActiveCfg = Debug|.NET
+		{BA0E71DB-25AE-4699-BBC1-AB9C23C462C6}.Debug.Build.0 = Debug|.NET
+		{BA0E71DB-25AE-4699-BBC1-AB9C23C462C6}.Release.ActiveCfg = Release|.NET
+		{BA0E71DB-25AE-4699-BBC1-AB9C23C462C6}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

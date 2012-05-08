@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSqlDemo", "LinqToSqlDemo\LinqToSqlDemo.csproj", "{96BDFB2D-A937-4F15-8F80-8A16B0D19C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToDataSetDemo", "LinqToDataSetDemo\LinqToDataSetDemo.csproj", "{94F83FA0-549B-424A-A2BC-5A1B66DFCA90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToXmlDemo", "LinqToXmlDemo\LinqToXmlDemo.csproj", "{762F3CEF-416B-4498-9061-C373FA1F1754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq101Demo", "Linq101Demo\Linq101Demo.csproj", "{AED7DBCA-7BC2-4BFF-95AF-EA42C77F4098}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96BDFB2D-A937-4F15-8F80-8A16B0D19C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BDFB2D-A937-4F15-8F80-8A16B0D19C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BDFB2D-A937-4F15-8F80-8A16B0D19C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BDFB2D-A937-4F15-8F80-8A16B0D19C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F83FA0-549B-424A-A2BC-5A1B66DFCA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F83FA0-549B-424A-A2BC-5A1B66DFCA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F83FA0-549B-424A-A2BC-5A1B66DFCA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F83FA0-549B-424A-A2BC-5A1B66DFCA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762F3CEF-416B-4498-9061-C373FA1F1754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762F3CEF-416B-4498-9061-C373FA1F1754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762F3CEF-416B-4498-9061-C373FA1F1754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762F3CEF-416B-4498-9061-C373FA1F1754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED7DBCA-7BC2-4BFF-95AF-EA42C77F4098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED7DBCA-7BC2-4BFF-95AF-EA42C77F4098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED7DBCA-7BC2-4BFF-95AF-EA42C77F4098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED7DBCA-7BC2-4BFF-95AF-EA42C77F4098}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="07c1aa7c-78a9-4bd1-bb9a-0311eff71028" name="類別圖" linkedPackageId="f99d1738-7354-4cf7-9987-4e32db58325f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="3a77abe6-407f-4cc6-b695-5fabb811e8bf">
+      <profileInstance Id="ec552e52-26e2-412c-b847-7a5e1157f0de" name="CSharpProfile">
+        <elementDefinition Id="4623a5c8-ef40-43cb-8b56-c0d7aca0b7e7" />
+      </profileInstance>
+      <elementDefinition Id="22f599e4-c26a-463e-87be-6c4698e5e5a6" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1d747041-4e20-43f8-8e7a-55316db8fdb3" name="Account" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="0dd8b7c4-ecb9-4023-952f-80861c638fd6" name="model" profile="MyUmlProfile">
+            <elementDefinition Id="f95aa8ca-74a4-4199-b145-aae40da2219e" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="c920fd18-adf0-4de3-9db9-dc1826bd6ead" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f78c530a-451a-43a1-9f3b-9a00d8adf406" name="LoginPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="02d19994-e729-4114-842f-cbafeb69edb2" name="view" profile="MyUmlProfile">
+            <elementDefinition Id="d971c427-bd9c-429a-b563-8676082eadc1" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="5320f943-8d48-4f8c-b825-8fe51633bfcb" />
+        <suppliersInternal>
+          <dependency Id="1ea73b3c-8ebe-4064-b283-56e0f5244e22">
+            <classMoniker Id="1d747041-4e20-43f8-8e7a-55316db8fdb3" LastKnownName="Account" />
+            <elementDefinition Id="d9c741c3-9e2b-47b9-a422-b83614441ed3" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b83e45a-336d-4c92-9947-916355f8a334" name="LoginController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="738ee8b1-2e4d-4117-a824-a2e326ff0237" name="controller" profile="MyUmlProfile">
+            <elementDefinition Id="a01c92e5-b605-4954-9f2b-07d95de718f2" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="ec769171-af53-4875-8218-2ffa18782a0f" />
+        <suppliersInternal>
+          <dependency Id="62f4bd68-ceed-4ff4-8730-665018de24d3">
+            <classMoniker Id="f78c530a-451a-43a1-9f3b-9a00d8adf406" LastKnownName="LoginPage" />
+            <elementDefinition Id="23361dfa-9e67-4b81-9dc0-afb153306903" />
+          </dependency>
+          <dependency Id="56aa23e7-aad9-4214-8cff-1f3123d519e9">
+            <classMoniker Id="1d747041-4e20-43f8-8e7a-55316db8fdb3" LastKnownName="Account" />
+            <elementDefinition Id="94310df1-be28-4760-8312-f99958be1dcf" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f99d1738-7354-4cf7-9987-4e32db58325f" name="NorthwindModel">
+    <elementDefinition Id="9636b560-34d1-4b78-95b9-fd7807afa217" />
+    <profileInstances>
+      <packageHasProfileInstances Id="6262f863-3496-4397-ac79-f4fba1fc606c">
+        <profileInstance Id="465f4c00-36c9-477e-a999-f05582c47bc2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="92bcc316-2d88-4823-bea6-9a44a9ddf763">
+        <profileInstance Id="72b27c78-df18-4f49-a0fc-caf877984021" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3e9d552d-1eac-441a-8ff0-41a9d6f6eb24">
+        <profileInstance Id="3c676cbd-6cec-41fa-868e-f316d81c9daf" name="MyUmlProfile">
+          <elementDefinition Id="3489878a-3679-4fc8-b0ae-e90865c29e4f" />
+        </profileInstance>
+        <elementDefinition Id="d01e91ea-6ace-474e-8000-83477190bad7" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

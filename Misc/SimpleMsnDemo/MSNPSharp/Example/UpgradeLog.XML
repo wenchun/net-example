@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DotMSNClient">
+</Property><Property Name="Solution File" Value="D:\Work\DotNet2\Examples\Fancy\MsnDemo\MSNPSharp\Example\DotMSNClient.sln">
+</Property><Property Name="Date" Value="2008年10月31日">
+</Property><Property Name="Time" Value="下午 18:30:54">
+</Property></Properties><Event ErrorLevel="0" Project="DotMSNClient" Source="DotMSNClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DotMSNClient" Source="DotMSNClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DotMSNClient" Source="DotMSNClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

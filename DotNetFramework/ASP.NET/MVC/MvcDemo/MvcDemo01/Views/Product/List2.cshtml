@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MvcDemo01.Models.Product>
+
+@{
+    ViewBag.Title = "List2";
+    // Layout = "~/Views/Shared/_Layout.cshtml";  //不用指定，因為 _ViewStart.cshtml 已經有設定。
+}
+
+<h2>在 View 中使用強型別的 Model</h2>
+
+<table>
+    <tr>
+        <th>
+            產品名稱
+        </th>
+        <th>
+            價格
+        </th>
+    </tr>
+
+@foreach (var product in Model) {
+    <tr>
+        <td>
+            <a href="@product.Link">@Html.DisplayFor(modelItem => product.Name)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.Price)
+        </td>
+    </tr>
+}
+</table>
+<p>
+@Html.ActionLink("示範 RenderSection", "DemoRenderSection", "Product") <br />
+@Html.ActionLink("回首頁", "Index", "Home")</p>

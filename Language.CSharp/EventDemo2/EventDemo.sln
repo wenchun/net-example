@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDemo", "EventDemo.csproj", "{42C64589-D3B1-4A9D-B238-932340A64935}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{42C64589-D3B1-4A9D-B238-932340A64935}.Debug.ActiveCfg = Debug|.NET
+		{42C64589-D3B1-4A9D-B238-932340A64935}.Debug.Build.0 = Debug|.NET
+		{42C64589-D3B1-4A9D-B238-932340A64935}.Release.ActiveCfg = Release|.NET
+		{42C64589-D3B1-4A9D-B238-932340A64935}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

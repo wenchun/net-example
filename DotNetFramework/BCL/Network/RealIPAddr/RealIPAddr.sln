@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealIPAddrServer", "RealIPAddrServer\RealIPAddrServer.csproj", "{8B164524-FD3C-42A5-AB04-71BF9925E000}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealIPAddrClient", "RealIPAddrClient\RealIPAddrClient.csproj", "{72A229C2-4DEF-44CD-B13C-89D2AE3C5E68}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8B164524-FD3C-42A5-AB04-71BF9925E000}.Debug.ActiveCfg = Debug|.NET
+		{8B164524-FD3C-42A5-AB04-71BF9925E000}.Debug.Build.0 = Debug|.NET
+		{8B164524-FD3C-42A5-AB04-71BF9925E000}.Release.ActiveCfg = Release|.NET
+		{8B164524-FD3C-42A5-AB04-71BF9925E000}.Release.Build.0 = Release|.NET
+		{72A229C2-4DEF-44CD-B13C-89D2AE3C5E68}.Debug.ActiveCfg = Debug|.NET
+		{72A229C2-4DEF-44CD-B13C-89D2AE3C5E68}.Debug.Build.0 = Debug|.NET
+		{72A229C2-4DEF-44CD-B13C-89D2AE3C5E68}.Release.ActiveCfg = Release|.NET
+		{72A229C2-4DEF-44CD-B13C-89D2AE3C5E68}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

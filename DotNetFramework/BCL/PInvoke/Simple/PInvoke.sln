@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke", "PInvoke.csproj", "{00494C8F-6C24-4390-B3C7-5B00C6427EE0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{00494C8F-6C24-4390-B3C7-5B00C6427EE0}.Debug.ActiveCfg = Debug|.NET
+		{00494C8F-6C24-4390-B3C7-5B00C6427EE0}.Debug.Build.0 = Debug|.NET
+		{00494C8F-6C24-4390-B3C7-5B00C6427EE0}.Release.ActiveCfg = Release|.NET
+		{00494C8F-6C24-4390-B3C7-5B00C6427EE0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

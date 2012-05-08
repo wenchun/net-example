@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemo_UpdateUI", "AsyncDemo_UpdateUI.csproj", "{86C3A19D-D611-49BF-ADA3-59086E1BF24A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{86C3A19D-D611-49BF-ADA3-59086E1BF24A}.Debug.ActiveCfg = Debug|.NET
+		{86C3A19D-D611-49BF-ADA3-59086E1BF24A}.Debug.Build.0 = Debug|.NET
+		{86C3A19D-D611-49BF-ADA3-59086E1BF24A}.Release.ActiveCfg = Release|.NET
+		{86C3A19D-D611-49BF-ADA3-59086E1BF24A}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

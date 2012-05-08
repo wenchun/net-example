@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "產品首頁";
+    //Layout = "~/Views/Shared/_Layout.cshtml"; 不用指定，因為 _ViewStart.cshtml 已經有設定。
+}
+
+<h2>產品首頁</h2>
+<p>此範例展示如何將自訂的 Model 傳遞給 View，而且在 View 中是以非強型別的方式存取 Model 物件。</p>
+<table style="width: 100%">
+    <tr>  
+        <td>產品名稱</td>  
+        <td>連結</td>  
+        <td>價格</td>  
+    </tr> 
+    @foreach (var product in Model)
+    {
+    <tr>          
+        <td> @product.Name </td>  
+        <td> @product.Link </td>  
+        <td> @product.Price </td>  
+    </tr>  
+    }
+</table>  
+
+<p>
+@Html.ActionLink("在 View 中使用強型別的 Model", "List2")
+</p>

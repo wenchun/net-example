@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTcpServer", "SimpleTcpServer\SimpleTcpServer.csproj", "{942CFA6F-E160-4B0D-ACD9-615AB5F6A612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTcpClient", "SimpleTcpClient\SimpleTcpClient.csproj", "{58B5D132-6A1F-4BFD-806F-4EFE3844618B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{942CFA6F-E160-4B0D-ACD9-615AB5F6A612}.Debug|x86.ActiveCfg = Debug|x86
+		{942CFA6F-E160-4B0D-ACD9-615AB5F6A612}.Debug|x86.Build.0 = Debug|x86
+		{942CFA6F-E160-4B0D-ACD9-615AB5F6A612}.Release|x86.ActiveCfg = Release|x86
+		{942CFA6F-E160-4B0D-ACD9-615AB5F6A612}.Release|x86.Build.0 = Release|x86
+		{58B5D132-6A1F-4BFD-806F-4EFE3844618B}.Debug|x86.ActiveCfg = Debug|x86
+		{58B5D132-6A1F-4BFD-806F-4EFE3844618B}.Debug|x86.Build.0 = Debug|x86
+		{58B5D132-6A1F-4BFD-806F-4EFE3844618B}.Release|x86.ActiveCfg = Release|x86
+		{58B5D132-6A1F-4BFD-806F-4EFE3844618B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

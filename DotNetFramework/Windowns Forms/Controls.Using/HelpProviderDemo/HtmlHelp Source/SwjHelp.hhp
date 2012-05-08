@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=SwjHelp.chm
+Contents file=Table of Contents.hhc
+Default topic=index.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x404 中文 (台灣)
+Title=北縣社政系統 - 共用函式說明
+
+
+[FILES]
+index.htm
+js_GenerateXml.htm
+js_DateUtil.htm
+js_SysUtil.htm
+jsp_public.htm
+java_InfoMsgDAO.htm
+
+[INFOTYPES]
+

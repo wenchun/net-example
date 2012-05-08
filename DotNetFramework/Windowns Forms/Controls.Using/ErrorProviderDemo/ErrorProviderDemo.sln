@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ErrorProviderDemo", "ErrorProviderDemo.vbproj", "{9554F29C-18E8-4F3D-B636-9B9F1A396C93}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9554F29C-18E8-4F3D-B636-9B9F1A396C93}.Debug.ActiveCfg = Debug|.NET
+		{9554F29C-18E8-4F3D-B636-9B9F1A396C93}.Debug.Build.0 = Debug|.NET
+		{9554F29C-18E8-4F3D-B636-9B9F1A396C93}.Release.ActiveCfg = Release|.NET
+		{9554F29C-18E8-4F3D-B636-9B9F1A396C93}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropControl", "DragDropControl.csproj", "{F49681BC-9F04-40FE-B39C-2ACBD020C295}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F49681BC-9F04-40FE-B39C-2ACBD020C295}.Debug.ActiveCfg = Debug|.NET
+		{F49681BC-9F04-40FE-B39C-2ACBD020C295}.Debug.Build.0 = Debug|.NET
+		{F49681BC-9F04-40FE-B39C-2ACBD020C295}.Release.ActiveCfg = Release|.NET
+		{F49681BC-9F04-40FE-B39C-2ACBD020C295}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

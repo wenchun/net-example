@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Customers>
+  <Customer>
+    <ID>A01</ID>
+    <Name>Michael</Name>
+  </Customer>
+  <Customer>
+    <ID>A02</ID>
+    <Name>Jacky</Name>
+  </Customer>
+</Customers>

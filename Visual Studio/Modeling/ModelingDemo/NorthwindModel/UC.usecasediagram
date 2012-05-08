@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="b3520ba2-f1bb-4299-b480-ce46a8864ac7" name="線上購物系統" linkedPackageId="28c6ef67-c51a-4d6b-8fef-c9d809013fa1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="2cb053b8-142f-4b01-9755-4817297927ee">
+      <elementDefinition Id="dd056c40-ad6a-48c5-b97a-2b657333defe" />
+      <body>VIP 會員打八折。</body>
+      <annotatedElements>
+        <actorMoniker Id="1afe317a-afcd-4d5f-88d6-af47d9cc80e4" LastKnownName="VIP 會員" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="4da0f3c8-1f64-4253-9c68-68e61704e49a">
+      <profileInstance Id="c9356908-2484-4015-af58-935b32714287" name="CSharpProfile">
+        <elementDefinition Id="4623a5c8-ef40-43cb-8b56-c0d7aca0b7e7" />
+      </profileInstance>
+      <elementDefinition Id="22f599e4-c26a-463e-87be-6c4698e5e5a6" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="679829cd-228e-4b95-a3c3-9b75dc75126c" name="北風線上購物系統" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ec1303d9-fc5e-4052-812d-2d3e0c2993cc" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="96b76264-c312-41a1-89e0-cd6c0a515ecc" name="顧客" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffae754e-15f3-4956-a223-3c4b9e4a37c2" />
+        <targetEnds>
+          <association Id="b7913528-71f1-4cd6-90b0-816b48473333" isDerived="false" sourceEndRoleName="顧客" targetEndRoleName="查詢訂單" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dfb7e488-ca59-4e87-a39b-c72abf68b831" LastKnownName="查詢訂單" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="20b6e30f-dfa3-4f6b-adcb-db5e58ee6c33" name="顧客" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f961867-7cf1-4347-a2cb-1e19613fab6d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03ffd562-dcca-46e0-afa5-788961fef9c8" name="查詢訂單" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1d87ac2b-386a-4eef-894b-df302b887800" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f9123136-462c-48e4-8ed8-2e7cc0bb0d23" />
+          </association>
+          <association Id="21c3350a-7876-4709-8db3-7c9244ddedcc" isDerived="false" sourceEndRoleName="顧客" targetEndRoleName="瀏覽商品" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1cb7d1a6-c1f0-4e2e-981c-074fb1285b4d" LastKnownName="線上購物" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61c00e6a-11da-47c4-be83-abb41fc990df" name="顧客" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c83a312c-7651-46bc-ae4e-d66cf6bf3505" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="35ec2eda-dfdd-4f1c-938e-ceb86383d108" name="瀏覽商品" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7d8f69a0-ecee-4dd9-8bb7-12babb758278" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="405c4e1e-7c9d-448c-bae2-78d0e4261939" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="14c4afcc-d436-44e4-bb78-5a3efb7f038d" name="結帳" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b21d8ece-800c-42ea-99c8-7823ad6d937b" />
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="b6a871a2-d150-426d-a6f5-068e91048d2f" name="管理員" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6460d19b-8bd5-464a-a58e-395c4f09c1ca" />
+        <targetEnds>
+          <association Id="bb0cf2de-9345-4222-a658-acbbc31086a6" isDerived="false" sourceEndRoleName="管理員" targetEndRoleName="管理商品資料" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c99267ca-aede-4d18-81e7-b2b20f8d4e41" LastKnownName="維護商品資料" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b596fb34-1c23-4b38-acc2-c1e23b37d067" name="管理員" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3247d6a7-d560-4e84-accf-3466002c6482" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86b5c9e0-e26c-41e6-91bf-7f7033fc7f6e" name="管理商品資料" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5a5d0ad8-4fe4-4a47-9047-b3e7bf5323d5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf959406-0557-4587-b121-5ad54543bfa7" />
+          </association>
+          <association Id="76ccca93-5803-420d-bd2a-020e0a0671c9" isDerived="false" sourceEndRoleName="管理員" targetEndRoleName="管理顧客資料" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a1155fe7-6096-4990-a9e6-b88c691cd831" LastKnownName="維護顧客資料" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fa0b745-1ae3-4eb3-95f6-a41586adeaaa" name="管理員" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c7199d97-6ea1-4dd3-92f9-b1f58ca612bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d7cff65-2bfc-43ca-b9c8-087531d41048" name="管理顧客資料" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0609b083-a022-4f8d-9ff1-eb301f521810" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f4146187-fa75-4c32-947e-23872f14518d" />
+          </association>
+          <association Id="161ffb15-0773-43f8-beaa-d25af39859a2" isDerived="false" sourceEndRoleName="管理員" targetEndRoleName="維護訂單資料" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1ad4a827-1748-4966-8587-3996f2cadf9f" LastKnownName="維護訂單資料" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9c771e30-35cc-40f3-98fe-cbabc4ff89de" name="管理員" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e5b27d15-233a-4da4-bddb-0a9ea8009103" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd8cb8d3-2503-4b7d-9fe2-2db608239cf3" name="維護訂單資料" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a35c10e-ec53-45c5-aa4f-9cd2a70b6f15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="207bc9cb-f651-4e72-a8eb-2eb487067813" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="c99267ca-aede-4d18-81e7-b2b20f8d4e41" name="維護商品資料" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b610041-85f1-4089-9589-a67a37341d11" />
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="dfb7e488-ca59-4e87-a39b-c72abf68b831" name="查詢訂單" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="60fa1d7d-9902-4c71-85ac-05b82c5fe0f5" />
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a1155fe7-6096-4990-a9e6-b88c691cd831" name="維護顧客資料" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6b4aeed0-4471-4b4d-b616-f67139272ad8" />
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1ad4a827-1748-4966-8587-3996f2cadf9f" name="維護訂單資料" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea893f6d-b510-41c1-817c-13d7537b817a" />
+        <additions>
+          <include Id="34bfbfc4-1ef5-4309-ac99-d5709d2e01f9">
+            <useCaseMoniker Id="dfb7e488-ca59-4e87-a39b-c72abf68b831" LastKnownName="查詢訂單" />
+            <elementDefinition Id="bdf2e151-ad8a-4c60-9460-0b1b6a4fb77f" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="1afe317a-afcd-4d5f-88d6-af47d9cc80e4" name="VIP 會員" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6cb1a1aa-0d8e-41fe-aad1-443cb338b8a2" />
+        <generalsInternal>
+          <generalization Id="aca6af0b-5104-4973-bea2-e5e856f6dff2" isSubstitutable="false">
+            <actorMoniker Id="96b76264-c312-41a1-89e0-cd6c0a515ecc" LastKnownName="顧客" />
+            <elementDefinition Id="1d1ad6dd-d175-47b1-8f2a-6c320e19dd94" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1cb7d1a6-c1f0-4e2e-981c-074fb1285b4d" name="線上購物" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc539e9c-001e-40b0-9940-888ae8a23045" />
+        <additions>
+          <include Id="88c7b1e5-e61b-4e24-9325-9bd04f9c65af">
+            <useCaseMoniker Id="14c4afcc-d436-44e4-bb78-5a3efb7f038d" LastKnownName="結帳" />
+            <elementDefinition Id="60398594-08a6-44ed-a165-c7d3c741a61a" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="679829cd-228e-4b95-a3c3-9b75dc75126c" LastKnownName="北風線上購物系統" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="28c6ef67-c51a-4d6b-8fef-c9d809013fa1" name="NorthwindModel">
+    <elementDefinition Id="9636b560-34d1-4b78-95b9-fd7807afa217" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5e3ee1fb-7b0e-4f43-8981-cd8aa7064330">
+        <profileInstance Id="fce05f8e-4b30-47c2-a6c3-d8cac60335f2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d1e2cca5-2ce7-4407-bd5c-93f94194a19f">
+        <profileInstance Id="43240804-41df-4851-b2a1-4dd32ccbc95f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="51f403e8-01a9-4552-93a8-6f8f78776b91">
+        <profileInstance Id="19d92423-70dc-43fc-acee-98bc4e0787ce" name="MyUmlProfile">
+          <elementDefinition Id="3489878a-3679-4fc8-b0ae-e90865c29e4f" />
+        </profileInstance>
+        <elementDefinition Id="d01e91ea-6ace-474e-8000-83477190bad7" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

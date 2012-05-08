@@ -1,0 +1,312 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>DateUtil.js</title>
+</head>
+
+<body style="font-family: Verdana">
+<h2>InfoMsgDAO.class</h2>
+<h3>簡介</h3>
+<p>訊息通知處理，為存取表格S_INFOMSG 的公用介面。</p>
+<h3>函式清單</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" width="100%" id="table1">
+  <tr> 
+    <td width="46">void</td>
+    <td width="148" valign="top"><a href="#getInfomps">getInfomps</a></td>
+    <td width="538">取得訊息通知設定，並且寫入訊息通知檔。</td>
+  </tr>
+  <tr> 
+    <td width="46">void</td>
+    <td width="148" valign="top"><a href="#insert">insert</a></td>
+    <td>訊息通知新增。</td>
+  </tr>
+  <tr> 
+    <td width="46">Vector</td>
+    <td width="148" valign="middle"><a href="#getInsertVec">getInsertVec</a></td>
+    <td>回傳新增訊息SQL Vector，若有需要Transation控制時可使用，但若訊息筆數不可超過Integer的最高數量。</td>
+  </tr>
+  <tr> 
+    <td width="46">Vector</td>
+    <td width="148" valign="top"><a href="#qryDeptUser">qryDeptUser</a></td>
+    <td>取得訊息通知的人員。</td>
+  </tr>
+  <tr> 
+    <td width="46">void</td>
+    <td width="148" valign="top"><a href="#delete">delete</a></td>
+    <td>刪除訊息通知</td>
+  </tr>
+  <tr> 
+    <td width="46">void</td>
+    <td width="148" valign="top"><a href="#update">update</a></td>
+    <td>修改訊息通知</td>
+  </tr>
+  <tr> 
+    <td width="46">void</td>
+    <td width="148" valign="top"><a href="#">chgJobSatus</a></td>
+    <td>變更訊息處裡狀態</td>
+  </tr>
+</table>
+<p>&nbsp;</p><hr>
+<h3><a name="getInfomps"></a>getInfomps </h3>
+<p>取得W00_INFOMAPS 中各訊息分類的設定值，並將訊息新增至訊息通知的Table S_INFOMSG，實際進行新增處理。</p>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table3">
+  <tr>
+    <td width="43" valign="top">String</td>
+    <td width="69" valign="top"> item_no</td>
+    <td width="620">訊息分類代碼。</td>
+  </tr>
+  <tr>
+    <td valign="top">String</td>
+    <td valign="top">aDate</td>
+    <td>訊息公告起始日</td>
+  </tr>
+  <tr>
+    <td valign="top">String</td>
+    <td valign="top">msg</td>
+    <td>訊息內容</td>
+  </tr>
+  <tr>
+    <td valign="top">String</td>
+    <td valign="top">prg_name</td>
+    <td>連結名稱</td>
+  </tr>
+  <tr>
+    <td valign="top">String</td>
+    <td valign="top">prg_url</td>
+    <td>連結網址</td>
+  </tr>
+  <tr>
+    <td width="43" valign="top">String</td>
+    <td width="69" valign="top">creator</td>
+    <td>訊息產生者</td>
+  </tr>
+</table>
+<p><strong>傳回值</strong></p>
+<p>--</p>
+<p><strong>範例</strong></p>
+<p> Calendar cal = Calendar.getInstance();<br>
+  String msgs_dt = DateUtil.formatDateTime(cal.getTime(), &quot;yyyy-MM-dd&quot;);	
+  //事件發生日期<br>
+  InfoMsgDAO.getInfomps(itemno, msgs_dt, message, null, null, null);<br>
+</p>
+<hr>
+<h3><a name="insert"></a>insert</h3>
+<p><strong>簡介</strong></p>
+<p>傳遞所有參數新增至訊息通知檔，<br>
+  若通知方式為TYPE=1 ，則新增一筆，只要單位內任一人處裡即可 若type=2則新增多筆，單位內所有人皆必須處理。</p>
+<p>insert(String organ, String unit, String group, String idno, String msgs_dt, 
+  String msge_dt,<br>
+  String infocont, String prg_name, String prg_url, String e_online, String e_mail, 
+  String job_status, String mail_status, String user_define, int btype, int stype, 
+  String creator, int type, String _loginIDNO)</p>
+<p>insert (Hashtable hash, int type, String _loginIDNO, String sql) </p>
+<p><strong>參數</strong></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table3">
+  <tr> 
+    <td width="69" height="26" valign="top"> organ</td>
+    <td width="620">大單位</td>
+  </tr>
+  <tr> 
+    <td valign="top">unit</td>
+    <td>小單位</td>
+  </tr>
+  <tr> 
+    <td valign="top">group</td>
+    <td>群組</td>
+  </tr>
+  <tr> 
+    <td valign="top">idno</td>
+    <td>身分證字號</td>
+  </tr>
+  <tr> 
+    <td valign="top">msgs_dt</td>
+    <td>訊息通知起始日期</td>
+  </tr>
+  <tr> 
+    <td valign="top">msge_dt</td>
+    <td>訊息通知截止日期</td>
+  </tr>
+  <tr> 
+    <td valign="top">infocont</td>
+    <td>訊息內容</td>
+  </tr>
+  <tr> 
+    <td valign="top">prg_name</td>
+    <td>連結名稱</td>
+  </tr>
+  <tr> 
+    <td valign="top">prg_url</td>
+    <td>連結網址</td>
+  </tr>
+  <tr> 
+    <td valign="top">e_online</td>
+    <td>是否線上通知 0/1</td>
+  </tr>
+  <tr> 
+    <td valign="top">e_mail</td>
+    <td>是否Email通知</td>
+  </tr>
+  <tr> 
+    <td valign="top">job_status</td>
+    <td>處裡狀態 0/1</td>
+  </tr>
+  <tr> 
+    <td valign="top">mail_status</td>
+    <td>是否已寄出</td>
+  </tr>
+  <tr> 
+    <td valign="top">user_define</td>
+    <td>保留欄位</td>
+  </tr>
+  <tr> 
+    <td valign="top">btype</td>
+    <td>訊息大分類</td>
+  </tr>
+  <tr> 
+    <td valign="top">stype</td>
+    <td>訊息小分類</td>
+  </tr>
+  <tr> 
+    <td valign="top">creator</td>
+    <td>訊息產生者</td>
+  </tr>
+  <tr> 
+    <td valign="top">type</td>
+    <td>是否寄送給所有單位群組內的人 1 = 新增一筆 2=新增條件內的所有人員</td>
+  </tr>
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="top">hash</td>
+    <td>hashTable內存放所有訊息資訊。</td>
+  </tr>
+  <tr> 
+    <td valign="top">type</td>
+    <td>是否寄送給所有單位群組內的人 1 = 新增一筆 2=新增條件內的所有人員；99=SQL</td>
+  </tr>
+  <tr>
+    <td valign="top">_loginIDNO</td>
+    <td>訊息產生者</td>
+  </tr>
+  <tr> 
+    <td width="69" valign="top">sql</td>
+    <td>如果type=99 則以SQL字串來取得寄送訊息的人員。</td>
+  </tr>
+</table>
+<p>&nbsp;</p><p><strong>傳回值</strong><br>
+  --</p>
+<p><strong>範例 </strong></p>
+<p>&nbsp;</p>
+<hr>
+<h3><a name="update"></a>update</h3>
+<p><strong>簡介</strong></p>
+<p>修改訊息通知</p>
+<p>update(Hashtable hash, String paperno, String _loginIDNO)</p>
+<p><strong>參數</strong></p>
+<table width="100%" border="0" cellpadding="5" id="table3" style="border-collapse: collapse">
+  <tr> 
+    <td width="69" valign="top">hash</td>
+    <td>hashTable內存放所有訊息資訊。</td>
+  </tr>
+  <tr> 
+    <td valign="top">paperno</td>
+    <td>要變更的訊息代號。</td>
+  </tr>
+  <tr> 
+    <td valign="top">_loginIDNO</td>
+    <td>訊息產生者</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr>
+<h3><a name="getInsertVec"></a>getInsertVec</h3>
+<p><strong>簡介</strong></p>
+<p>回傳新增訊息SQL Vector，若有需要Transation控制時可使用，但若訊息筆數不可超過Integer的最高數量。</p>
+<p>getInsertVec(Hashtable hash, int type, String _loginIDNO)</p>
+<p><strong>參數</strong></p>
+<table width="100%" border="0" cellpadding="5" id="table3" style="border-collapse: collapse">
+  <tr> 
+    <td valign="top">hash</td>
+    <td>hashTable內存放所有訊息資訊。</td>
+  </tr>
+  <tr> 
+    <td valign="top">type</td>
+    <td>是否寄送給所有單位群組內的人 1 = 新增一筆 2=新增條件內的所有人員；99=SQL</td>
+  </tr>
+  <tr> 
+    <td valign="top">_loginIDNO</td>
+    <td>訊息產生者</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr>
+<h3><a name="qryDeptUser"></a>qryDeptUser</h3>
+<p><strong>簡介</strong></p>
+<p>取得訊息通知的人員。</p>
+<p>qryDeptUser(String parentDept, String dept, String group, String idno)</p>
+<p><strong>參數</strong></p>
+<table width="100%" border="0" cellpadding="5" id="table3" style="border-collapse: collapse">
+  <tr> 
+    <td width="20%" valign="top">parentDept</td>
+    <td width="80%">上層的部門代號。</td>
+  </tr>
+  <tr> 
+    <td valign="top">dept</td>
+    <td>所屬部門代號。</td>
+  </tr>
+  <tr>
+    <td valign="top">group</td>
+    <td>群組代號。</td>
+  </tr>
+  <tr> 
+    <td valign="top">idno</td>
+    <td>身分證字號。</td>
+  </tr>
+</table>
+<p><strong>回傳值</strong></p>
+<p>Vector</p>
+<hr>
+<h3><a name="delete"></a>delete</h3>
+<p><strong>簡介</strong></p>
+<p>刪除訊息通知</p>
+<p>delete(String paper_no) </p>
+<p><strong>參數</strong></p>
+<table width="100%" border="0" cellpadding="5" id="table3" style="border-collapse: collapse">
+  <tr> 
+    <td valign="top">paperno</td>
+    <td>要刪除的訊息代號。</td>
+  </tr>
+</table>
+<p>回傳值</p>
+<p>--</p>
+<hr>
+<h3><a name="chgJobSatus"></a>chgJobSatus</h3>
+<p><strong>簡介</strong></p>
+<p>變更訊息處裡狀態</p>
+<p>chgJobSatus(String paper_no, String status, String updator) </p>
+<p><strong>參數</strong></p>
+<table width="100%" border="0" cellpadding="5" id="table3" style="border-collapse: collapse">
+  <tr>
+    <td valign="top">paper_no</td>
+    <td>要修改的案號。</td>
+  </tr>
+  <tr> 
+    <td valign="top">status</td>
+    <td>要變更的案件狀態。</td>
+  </tr>
+  <tr> 
+    <td valign="top">updator</td>
+    <td>修改者。</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+
+</html>

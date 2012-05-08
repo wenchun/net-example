@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MvcDemo01.Models.Product>
+
+
+@{
+    ViewBag.Title = "DemoRenderSection";
+    // 注意這裡使用的 Layout 是另一個檔案!!
+    Layout = "~/Views/Shared/_LayoutWithSection.cshtml";
+}
+
+@helper DisplayPrice(double value) 
+{
+    @String.Format("NT$ {0}", value)
+}
+
+<h2>DemoRenderSection</h2>
+
+<table>
+    <tr>
+        <th>
+            產品名稱
+        </th>
+        <th>
+            價格
+        </th>
+        <th>
+            用 Global helper method 顯示的價格
+        </th>
+    </tr>
+
+    @foreach (var product in Model) {
+    <tr>
+        <td>
+            <a href="@product.Link">@Html.DisplayFor(modelItem => product.Name)</a>
+        </td>
+        <td>
+            @* 注意這裡使用了自訂的 @helper 方法 *@
+            @DisplayPrice(product.Price)
+        </td>
+        <td>
+            @* 注意這裡使用了全域的 @helper 方法：App_Code\MyHelper.cshtml *@
+            @MyHelper.DisplayPrice(product.Price)
+        </td>
+    </tr>
+    }
+</table>
+<p>@Html.ActionLink("回首頁", "Index", "Home")</p>
+
+@section SideBar {
+    <p>這是利用 @@RenderSection 所產生的區塊內容</p>
+    <p>MVC 3 的 Razor 語法真酷!</p>
+}

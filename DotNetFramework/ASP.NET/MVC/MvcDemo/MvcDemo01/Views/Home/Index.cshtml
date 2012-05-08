@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";    
+    // 其實底下這行 Layout 設定可以刪除，因為在 Views 資料夾下
+    // 的共用檔案 _VieStart.cshtml 已經有設定。
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Home/Index</h2>
+<p>
+現在時間：@ViewBag.CurrentTime
+</p>
+
+@Html.ActionLink("進入產品頁面", "List", "Product")
+</p>

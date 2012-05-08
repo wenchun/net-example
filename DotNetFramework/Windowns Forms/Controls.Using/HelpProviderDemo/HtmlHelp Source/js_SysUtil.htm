@@ -1,0 +1,214 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>SysUtil.js</title>
+<style>
+<!--
+pre          { font-family: Courier New }
+-->
+</style>
+</head>
+
+<body style="font-family: Verdana">
+
+<h2>SysUtil.js</h2>
+<h3>簡介</h3>
+<p>系統工具函式。</p>
+<h3>函式清單</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" width="100%" id="table1">
+  <tr>
+    <td width="17">　</td>
+    <td width="154"><a href="#execSQL">execSQL</a></td>
+    <td>從隱藏頁框（BARForm）執行 SQL 命令。注意呼叫此函數時，呼叫端網頁必須撰寫一個 call back 
+    函式：afterExecSQL()，以便命令執行完畢之後，再去回 call afterExecSQL()，以接續程式流程。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154"><a href="#execSqlEx">execSqlEx</a></td>
+    <td>與 execSQL 類似，僅多一個參數：error_page，可用來指定當異動發生錯誤時，要導向的網頁。<br>
+    在錯誤處理的 JSP 裡面，可以用 request.getAttribute(&quot;exception&quot;) 的方式來取得 exception 物件。<br>
+    取得 exception 物件後，你就可以自由處置這個錯誤，看是要抑制掉，還是把訊息翻譯後重新丟出異常，或者在前端網頁顯示出來...都可以。 </td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154"><a href="#openPrgWindow">openPrgWindow</a></td>
+    <td>從新視窗開啟程式。</td>
+  </tr>
+  <tr>
+    <td width="17" height="31">　</td>
+    <td width="154" height="31"><a href="#openPrgWindowEx">openPrgWindowEx</a></td>
+    <td height="31">從新視窗開啟程式，可帶額外的 URL 參數。</td>
+  </tr>
+  </table>
+<p>　</p>
+<hr>
+<h3><a name="execSQL">execSQL</a></h3>
+<blockquote>
+  <p>從隱藏頁框（BARForm）執行 SQL 命令。注意呼叫此函數時，呼叫端網頁必須撰寫一個 call back 
+  函式：afterExecSQL()，以便命令執行完畢之後，再去回 call afterExecSQL()，以接續程式流程。<br>
+  <br>
+  function execSQL(cmd, xml, params, owner_data)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table3">
+  <tr>
+    <td width="127" valign="top">cmd</td>
+    <td>欲執行的命令。不限定內容，要是方便在返回呼叫端時可以判斷之前<br>
+    執行的命令是什麼。建議採用下列慣例：<br>
+    &quot;I&quot; : 新增<br>
+    &quot;D&quot; : 刪除<br>
+    &quot;U&quot; : 修改<br>
+    &quot;Q&quot; : 查詢</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">xml</td>
+    <td>以 XML 格式包裝的 SQL 命令。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">params</td>
+    <td>
+    <p>控制參數，格式為 name=value，多個參數值之間以分號 ';' 隔開。<br>
+    可用的參數值如下：<br>
+    <br>
+    ShowOk=0/1/2<br>
+    0: 若執行的 SQL 命令成功，不顯示任何訊息。<br>
+    1: 若執行的 SQL 命令成功，顯示訊息於狀態列。<br>
+    2: 若執行的 SQL 命令成功，以對話窗及狀態列顯示訊息。<br>
+    <br>
+    ShowError=0/1/2 <br>
+    0: 若執行的 SQL 命令失敗，不顯示任何訊息。<br>
+    1: 表示若執行的 SQL 命令失敗，顯示訊息於狀態列。<br>
+    2: 表示若執行的 SQL 命令失敗，以對話窗及狀態列顯示訊息。<br>
+    <br>
+    以上參數可以不指定，BARSave.jsp 會使用預設值。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">owner_data</td>
+    <td>使用者自訂的資料，這個參數會傳遞回呼叫端網頁的 afterCommand() 函數的 owner_data 
+    參數，讓呼叫端的程式流程之間可以持續傳遞必須的參數資料。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>無。</p>
+<h4>範例</h4>
+<p>execSQL(&quot;I&quot;, xml, &quot;&quot;, &quot;&quot;);<br>
+execSQL(&quot;U&quot;, xml, &quot;&quot;, &quot;mydata=123&quot;);<br>
+execSQL(&quot;Q&quot;, xml, &quot;ShowError=0&quot;, &quot;mydata=123&quot;);</p>
+<p>Call back 函式：</p>
+<pre>function afterExecSQL(cmd, rowsAffected, ownerData) 
+{
+  if (cmd == &quot;D&quot;){
+    onClear();
+  } 
+  oldRow = 0; 
+  onQuery(); 
+}</pre>
+<hr>
+<h3><a name="execSqlEx">execSqlEx</a></h3>
+<blockquote>
+  <p>與 execSQL 類似，僅多一個參數：error_page，可用來指定當異動發生錯誤時，要導向的網頁。<br>
+  在錯誤處理的 JSP 裡面，可以用 request.getAttribute(&quot;exception&quot;) 的方式來取得 exception 物件。<br>
+  取得 exception 物件後，你就可以自由處置這個錯誤，看是要抑制掉，還是把訊息翻譯後重新丟出異常，或者在前端網頁顯示出來...都可以。 <br>
+  <br>
+  function execSqlEx(cmd, xml, params, owner_data, error_page)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table5">
+  <tr>
+    <td width="127" valign="top">cmd</td>
+    <td>欲執行的命令。不限定內容，要是方便在返回呼叫端時可以判斷之前<br>
+    執行的命令是什麼。建議採用下列慣例：<br>
+    &quot;I&quot; : 新增<br>
+    &quot;D&quot; : 刪除<br>
+    &quot;U&quot; : 修改<br>
+    &quot;Q&quot; : 查詢</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">xml</td>
+    <td>以 XML 格式包裝的 SQL 命令。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">params</td>
+    <td>控制參數，格式為 name=value，多個參數值之間以分號 ';' 隔開。<br>
+    可用的參數值如下：<br>
+    <br>
+    ShowOk=0/1/2<br>
+    0: 若執行的 SQL 命令成功，不顯示任何訊息。<br>
+    1: 若執行的 SQL 命令成功，顯示訊息於狀態列。<br>
+    2: 若執行的 SQL 命令成功，以對話窗及狀態列顯示訊息。<br>
+    <br>
+    ShowError=0/1/2 <br>
+    0: 若執行的 SQL 命令失敗，不顯示任何訊息。<br>
+    1: 表示若執行的 SQL 命令失敗，顯示訊息於狀態列。<br>
+    2: 表示若執行的 SQL 命令失敗，以對話窗及狀態列顯示訊息。<br>
+    <br>
+    以上參數可以不指定，BARSave.jsp 會使用預設值。</td>
+  </tr>
+    <tr>
+    <td width="127" valign="top">owner_data</td>
+    <td>使用者自訂的資料，這個參數會傳遞回呼叫端網頁的 afterCommand() 函數的 owner_data 
+    參數，讓呼叫端的程式流程之間可以持續傳遞必須的參數資料。</td>
+    </tr>
+  <tr>
+    <td width="127" valign="top">errorPage</td>
+    <td>錯誤處理網頁的 URL。</td>
+  </tr>
+</table>
+  <h4>範例</h4>
+  <p>前端 JavaScript 指令：</p>
+  <blockquote>
+    <pre>execSQL(&quot;U&quot;, xml, &quot;&quot;, &quot;&quot;, &quot;/jsp/myErrorPage.jsp);
+execSQL(&quot;U&quot;, xml, &quot;&quot;, &quot;&quot;, &quot;/jsp/myPrg.jsp?cmd=error);
+execSQL(&quot;U&quot;, xml, &quot;&quot;, &quot;&quot;, &quot;http://www.myweb.com/jsp/myPrg.jsp?cmd=error);</pre>
+  </blockquote>
+  <p>後端 JSP 錯誤處理網頁：</p>
+  <blockquote>
+    <pre>Exception ex = (Exception) request.getAttribute(&quot;exception&quot;);
+System.out.println(ex.toString());</pre>
+  </blockquote>
+  <hr>
+<h3><a name="openPrgWindow">openPrgWindow</a></h3>
+<blockquote>
+  <p>從新視窗開啟程式。</p>
+  <p>function openPrgWindow(webRoot, prgNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table4">
+  <tr>
+    <td width="127" valign="top">webRoot</td>
+    <td>Web 應用程式的 root URI。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">prgNo</td>
+    <td>程式編號，例如：&quot;1112&quot;。</td>
+  </tr>
+  </table>
+  <hr>
+<h3><a name="openPrgWindowEx">openPrgWindowEx</a></h3>
+<blockquote>
+  <p>從新視窗開啟程式。</p>
+  <p>function openPrgWindowEx(webRoot, prgNo, param)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table6">
+  <tr>
+    <td width="127" valign="top">webRoot</td>
+    <td>Web 應用程式的 root URI。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">prgNo</td>
+    <td>程式編號，例如：&quot;1112&quot;。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">param</td>
+    <td>額外的 URL 參數，第二個參數之後以 &amp; 字串隔開。</td>
+  </tr>
+  </table>
+
+</body>
+
+</html>

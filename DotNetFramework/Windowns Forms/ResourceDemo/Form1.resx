@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 1.3
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">1.3</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used forserialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnReadResX.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResXUsingRM.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhfgB4APcAANTSzgsTFQoNE1dgZWxxcyMsLzQ9P0ZITDtIS2x+g3+Li2+Mi32FiICNlYSUnYOS
+        lI6VmI+cpp2lp5OjrXSDjJGbm5OjpI6VpXV+jIOepYKaonOUmGGLh2x4fUxZXExfY1dfXC80NmNwdF5q
+        dWGEhBMbHFdYWEdQUV9oajRCR5+stmR3e3V+gVNnax0dJZOrtH+FliAjI0NXXJymtHZ4ei0tLnSDhKOz
+        uD9CQ622vqCrq666wCs8QJydpkdRXKO3xDpQVY6NlrLCzbTGxKO6vJOrq3+emJGzt7LAwa20s7zL0MvY
+        3tPg48bR3LPK0SM0N9Tm5+Xw8dzr7ayttbzGzcXK2ZyVsLzS1qG/xWSVmIGusVR6fHONlZO6wViWmDx2
+        dNXY2U+Gh3ympmmkorG6tK2sqcfQ0bzDwo+Mir26ucrW1Iy+xMC1tsbBwpycmhMjJnhxdTw+RdTJy3Vo
+        ZWdfXFhQUo2Fg5yUkq6ko8XJyVlZaXdwa4d4c5l+d2xoa7yrry4kJIl+fh4VFiAbG4V5fz47OYRvb5R4
+        fpyFgKSMgpyNj6aaki4YFBQUFqWVkKWcnT40NlFCQdS+xNzj5aTIxC4eHRQODEAsLFhSZCAlLeXq7OTl
+        5mVhafTz9KSUoOn29kxCVEhIZGhZampminpvinloiXt3koh+mHxwlYZxkXhigHRWdoZ4koRiiYVojHRO
+        dGhRcI+EmmRJaWxhgHVdf4p4nmxWfHRidHlnfI6MqJR0l4RqfKSFrKeTtZyGnJKEqqaNrZV7mYZxnZyE
+        rKedvLSawKR9p5Z8pZyMr2J5hkA+hFRKcKhwmCwmXHlbbIRSZIQ+TIQvL3wuPEwYIGZQUxQaUCQiVFpI
+        VFA8QlQyRE8uN1wiJHwiJKQ6NGAgFEQgIDAuTGRGVDwmKU8zL0w6MWhJPXA4KIw+LDwaFE0sKIxeZGwm
+        LFxASGlPQmtIMm1BKFw0MFtJP3RJNmBAMGhYXF46GlRCLHRPPFlPRGA0GGE/IWQoDGw2FGhWSFQ8IGR+
+        fCwAAAAAfgB4AAAI/wDz+fNnL57Bgwfx4TPBcECHBlwStPjwocWAEyZENIgggsKCfxQadKAwYoCPAwd4
+        yOhIoUOHESI8yEDAI4WIESW4TJigQcOEFy8mZPj548YNFRMcNNAQIUKHEAZw4PBwMcWJFigGhHDhYpDX
+        QYIENRLkokCBTDFchA3bqK2LGiFC5BPob968cnjjtVNYh6FfEx0UNBAMQ48eU35QIEDgY0QCES1WtBhR
+        8UOBACuKTDCKVALSCQ+4cAHyJlMKDVx6agCaQcNQoy+ORmgw+AOPGDEKGOCx2wAQIE/e4B7uokSJAnEL
+        pP0Kdm1bAQECNNo3t56+d+6yt9tOjVq/fu3q9P81QaBBkAu5OHESBYcFjQFx4hg44HAFZNsCUnyIMEHF
+        jx2aOZBAAg48oEELJTxRQAOh9RQUT6n9BNQEFjgwgg8+nMDDccrhVsIbwplVQA0F1JSCAQW8UcJYgnjF
+        4lpiCSCjAPvwk08972Anzz3btfOdj/1Qg894gSk1AiezmLBHIHBcAwommByAQAojrHBCAAWcAEQHKkSg
+        AhEarNABFxSEtkIKbwTQwQMOcGGETztpYKBPR03QwAAefHCCBx4YIFwIOFwWQAmDNMJccW0Z19VXhhq3
+        YluNyBhddfpc506PmPYopEImDEBgAw5AQAMKdNBBj6mcwEGKH5ycVIILmYT/gIAHDuxUlAUNUJCADB/I
+        gKZpIiQwwQIb1CqUBg64dkNTCfApgwcm8LkhcivCuBZzYrUIFiCFSCUVAigdgEMccdVgTj3zxFOQXj3e
+        c488eLFDTiTxDMknA7Q5UEEDcNRxDTX0wEIKK6ecAoMBAcTByQEnUPnTBD9kkAxMQHwQ0xtlVZxMMkZs
+        4FNPDwz1QxG04dnpAB94cIJyIRQwVnPMASIzzIDU0KkJKOSsswgi5DzCCPBgc416fuhhAjXtlOOOPPLM
+        k046l0CCTSSRiDcAC4I1UMEdddAjipPL5NIABBBg6UEHi53gAwU/WSDCB8lwkYEDDnRQWggePAFEC8Tq
+        /8STAxm88IMKFLAgwgA543nCCTiUEEMImQyi1ls4YMQJCn4kBsIBeA+Ac8488zwCCqGLwM41mIwwyigE
+        rIe0OznC87Q4MkMSCTnxHAAC1grYgQg23aEOjh4oRDBACUzZNsDhwmbQggwtGBiBAxI0cFwmb/Cg9wep
+        IavTUBT06ikDh/O5J8KPhxCD4wb0aVyhhA5SwAGkd0CDSz2jAAJMoeccyiizmIUqcAGHUsxCFKLAxjjS
+        sUBGOLASl7jEOMiBjROAAA6GUMc6pvENbOgPAU84QBCeIIPqISAEKCCfUnq1gAeAqlkoykQmzlKAWXVg
+        BWXKVwSQZbgVNEAFFkjAAP9AoDIczAcqJzzBAWLglUowR3IHSIwICFA6/ZGOZ1esBjhIkYpgBCMWqShF
+        KXahCmesghrh0MYlxFEJcUhwHBOMRDnMEY1zeAMdgqAPSgZAgBIwoAIsMAutaNMCIIjmAw3QHnLMIisU
+        PMQCNyjKDYLCn6NYIAIVgJgOJMAzPDnSBijwAM9ogBtADAIQTGTiIE6QGJe4En9YFEEHGNABEVTDGqWo
+        hRePIUZhCCMVqdAFMGuRClWsAhayuAY2sqENbWyDG92Ihje+YcQDgAISlSsBBCpwgky4IAS0+cCUasKD
+        BrTMLDPEwQDGtpkcIGEHRCDCDYqgAqP0ZzODu0EFFLD/AhsooAIViMADbPAA8oXAK6iMQR38wEcUsOCV
+        VKTiFV3CAioqoxnC8GIqTsGKVLCCFcIg5kdZEQtifjEWwdDFLpzxDGhEQxrToEYFWiCCA0DCAAelD24a
+        kQkKiMAHPCjRE3jwgBAEFTk46EAKIdCfHyDhnTsYXFEGtwMd/KAoKtCBQBVgga52FaAPUAANDpDQOKAB
+        AjqAgAJeCcvSyZKiyliGLr2oiCAEoaTAPAZHOcqKWvgCGIrwBDJ+8YtjGIMZzNBFLGpVhA4oMVYmMEAN
+        SPQGFGCIB5h9AgIU0AIPYEWWY4OAZ+p5gx2YVp5HkeQNcrADFSDhBjrQQRGKYAHZ/8Z2kxaoAATgQAAW
+        uKEMt62e/VxZOgIQgK2j8GUqgnCHHji3B7HgIjJiYYqPnuIXyEDGX7ObC8Ie4xi/wEAyEvCAbUbAAB0g
+        l4h44EgFkM+V5WUBvgAq2gpYgLRRNW0OjGJVJFzVtD9Qwn5haxQC11MHN5CAbiugAyTogAxUeK0EWPDQ
+        h2KRra78JTAh0IOdTCACMCAFKn5Ri1qcIhbYzW4vitGLwf5iGMeIxQxgULjBQOABBZBAHBjp0KbUMwe5
+        ta+QIyABCUTgvp75AWuXvINIllYJpo2yEp56A0iWdgdQ1YEKdGuBJHj5BmZ45w8kQMsO2ICKPHMlhR/a
+        gVqUgv8UMIDAJZtyAfSguGC1AO8vetELYACDFzCuhS50UQEV0EAEDGAADBqwgiewwANxwIEJHpDbeqrg
+        wLlVcFcRnAQJlPap72TtaveL5Ss4VQlDGMKUk+DV2uqgtTq45APsmwQdVIDVEujqQG1wv9DZYDDuobBL
+        3AznBtDADcj2zAwikItTfPe7KQ40K1Bxilz0YNkYYAEF/MmAJ4AgiCj4tX0RfJQC59oC50ZwDvIJ1SY3
+        2ShYRsKUlbAEKlAB1VXGZKx1S2nahNa8se2qBMKqADa7RAEKsAGFbZAAl4TRFLkIaFNiTYEZXMAUsRiG
+        MQA92GMEg5i1+MUFrDCDCSgAAwX/H8lTRABWOaO7wAVWQZFvG9vVApi1TzXta2+g6nsPYQlLUIISzCBg
+        2EoACVtmgAIkIBj6BrS28VaBWhNu8AFpmwEsaHgHXFEKVlygB/zpT1Bm0OwXG+O7xMzrMHphhQvMYAYO
+        oAAFGLBtBQxIX02pgARq3uT9BpzcXk4ClnXO2h1EGKo3EDoVmkDvJZhBDUSH6hmQLgEIoKEHQZDzkXO9
+        WlSbgbVhZYANKKrwRBduza7w6Cm+vhOgIAUGpiDxoFOBCi4GAxjFIAYxZpADtc6dAghnEwQw2erbJoEz
+        m0QwqJePBJw/NcJDeGfin2oGVZvBDEy4/pTfSYVNVsCul1fw/yZd604kLGEHStDBYBSeABsoXe6nZ4EN
+        XOFLVLACBk3JPwyoDVJXcH1gwwAMfNYLxJADKtAASscgszZkRyZwfEdz6oYE0GdvQmBvTyUE1IcEQ7AD
+        SQBqQ3BvQwd5YBBmh6cDnRYEMBAERZZrP4CBGqgETSAEULZPdhcY7rdtWSd/LBAMwORRsQBQuhUEfVUL
+        puAKrdAKXfcLAshnJDcF+zJreNdqXgWBVPhpqiZ0ijcERKcEVICBS5BzUfZUQ3d918cETEAFYdZpsbVP
+        WoNbQ8B499YETUAFWKYDSkFh7kV3FCZ32uZnqUAKtcBcaHAHdkAIwKQLpFAKrZB6hPULuf/wiHW2TXJ2
+        bl5lX65Gha5WYC84hopXgYp3b2pweIMngWOofWYABUygBlN2FH4XW1hWWkDXBI9nBnQoYfukdKIHf7rI
+        C70QRqfgC3YQCI6gCMCUeqWgCotYCyj2CzCQC+ixeSuIW3uHW+QGgbV1ZVgmdGS4hVyofd0YZhsYfaVI
+        hnlgBkCXinlwBsd3A0sABWrwjmG2BEywBE3ABHOIgU1mAWqVi/BnAwonArrgZqUATLtAUomYiKVghK5g
+        Yo+YC+aFblSYazQ3jVoWW9H4aaQ4dFwYgttIhlkohuNoikswCSRJdJDXBOdohvZojvRohhvZZLHmAAXn
+        j3I3ejHhCrT/cAs6iQsDZEAImZCpwJB1Rnx7d2nWSJFUaJGxJXjPh4XbyARSAAWO945LoIpXqIFoSHSm
+        SIaQlwflCAbyqJJAR48oOY9qMI9aKAT7pWC7ZgNzR1D4Qgu2kJO3gAt2+WakgJBBGQvnYV4zd2mAmZSC
+        uZRYlmrWp43Xh5JSEJVjCZa0eAaTZ2/a53hjKIKTwASXiZmXCQVRaYZApwayiJJBpwRCEFX7lnCJ5k8y
+        NwG2oAqqcIw6KUZilJcDEwtfB1C1NY0qcHyXBlsQmFVFlok50IHyBoLcGJpmuJiLqZJgkH2gJplDd4ZU
+        6XiaiZnWqZJiGYuM13ikOQT79WGD4V6//4YUKgALckkL6ClAs8kKpmAKWtMDueVVunkUgUlzWaWU5KZz
+        VxiS1yePyikFUSAFJOmZz4cEeSB0VcmSYakGJNmcA8qZlzmW80iPXCiLqBZ9OaBVDuB+NjACAfV2pYAK
+        rrkKtCBAgEgwBjN8TYFuDqhlMAecSElzV6aBHfmZsmiSyRkFOhqgApp99kYFZ1CO2Od4EqoJjtecIzkJ
+        UAAFOtqj2Al0idmFXdhauYVwBScYwxdAtGBMtPBmyvhRP7iCM7dJFBl4vllzR4Fb9UScEkiGYzmWcqgG
+        /gmgPEqSk1BvZwCkVFCOEyqWkxAFmpCKzakJmhAFl7mjTbqYqMgEMP+4kXRodIOBiwVFAbBQCsgkC65g
+        fyOVeUSWazF6WwUGqu9mdK/GWh9Yiu8op2NJlTkKoJ+gCZc5gkCKBBDGp9g5j5NQqJ/QnGDwp0salf85
+        CQAqoJcJh0InfXZoYw+hAA6wiK8AC6oATAQTC3YwfMWHn2saqoDHX7eFc/e2jY73eG/6jphJp8M6CWDp
+        laBGi2aQmVBpp7oaqA46j0ywqGFZrk5KljHYfEa2jywwACExotH6ZgSTgpMYnNM4nzkwnAQGc9J4A0+l
+        hVp5fZCnqmZosZipo4QaoUuQB1RABm2KBL26qMr5p5/wqkfanCq5qPSKmSzrmURXmjK3T7U0Agr/EAHH
+        OJAhagoGs2iWSKZVOGrDSW4wV2ToRwXWB3lbea8tW64aGwVMAJYdmwcgG2FnQJJS8K7KebKfcKdnaYbC
+        CpVRybLtmLViKYtdOGYVEFZrEneogAq0154wsGj/NIVoeluklQSFB3OCF2sQq5Hypn2SiX31aoaoCAYO
+        CqiFiq5dSbVPRQbYF7bAOglc+wlQqZmaIKAByqN06q5PynhqaWuz5ml0I0btybP+tk2b9qkFpreuS1qr
+        ZXToR5mnuoX9Wa8la4YOurgDqrRUkAOThwQMipn3GgWfoKN/Wq6wSqiwiqjDarbZOZqtJVAP4BkmJwp6
+        MAqkgAG0QTa4CZEy/3oDx+dlw7mORvFlsSVvnyiG9hadwtqk7kqSi6u7SquOwSuPEZqcJ4u1USCPgDqg
+        UMsEOnq8m3urY0l0HKhgDTABWqYAoAAKoeAHBuu99hWj57uOgZfBUQZb8XaY0Ve7ZxmsmWmnm7AJA3p9
+        XkkGwJunhpuqAhygYisFIymgZhCk1omohhqgZBuLU1ZVEaAAD7AZDoAJdYAJKHBWQAiE6FamXsaB5Duc
+        C3tlGaoDUCaGW4i01jen8Au2djqvKEy1ZJCnSnCZkyCnIRwFqMijS4DGTJAE/3QGQCesriq27iqPFPpO
+        WpUrmeQAeuADS5XEQDimnCZ4pmUU5ctaTVxVVv9oxZ+YlRn7v4hrpw0KACNYBV7puB5LBYaLncsJBZLL
+        xjoQGBBwBmUpwGbLsWbYBO8Yg01WAXRDATJJPCxAwUksyOKbyE5cyFE2eEUGsaCGmLSIhnlwll0cySSM
+        riN4fW2QjgZqbwYsx3IsoMrZxsald1QQlmaLpCxpjyhJmlRKgw6QMzSgANukYJgEUNFogk5MyFEWeDr3
+        TrklvjgXglB6oHmAvw3aqyS8CWAAAP78zzUsgWjomfhbr2TMuUrKBEjAApzQA6IFg3bcp/S4oPVWmrEG
+        AUonAivAAJkXyEaGzhJ5ZU1coGSQwaC2A9GIlfQ8j2HGpyS5CVGrz5NQwv3/DNCTYAZhbG+qeo73mrWb
+        i8aomAdoQANwQDZJYI4tG4vtqJKgi3S55QCX5AAdbYlE5tF7J765jGX2VtLnq3MoDXVD960p2bFDh8/I
+        rJn5PILpCAZ5kAR5es9VybTJuZg7ms0SMFZ2EARlQMosiaQqG5bSO7MQAJhjU8ErWMvTiI3xJoFIUGvk
+        lnNdBbE+93ieGbVcidaIi9mI2895kAZe2WBlTXSrKqF/yrlmKQFwwAl+EASPcAZmIJpLAJYEHZaMB5OV
+        dmnbpHcriEneO3PwFoZVSwW1tncdSIdFxqZCJ6cEvY0OetMOutk1jbhm8NkQZo7aKNecuaNLiopmUAY0
+        /+AHdQAHbkAGXIiGsW2drw3YU5ah+tgUE2DVH93bS8nOoBakVCt+HUiLtnYD93bNkCePHUnZumsGm02G
+        /pwHlAwA15cEECan2mjQSqq5UnCyWet4ZzAFQQAHJkAHQcDg7uSgi+l4pRx0Fp1bTbFNyXbYZFPORel8
+        yzd0DgZQOmCBtpYEaSCBqQql21iO76jWedDP020GlBzJbH0GZQBhQNff7VqnA2y8MKyKr1UBMIACet0D
+        SXDP8nvTSK27c5ihA4cGYF4BbiCmCrbiEDDmg7zYT+WVZ6ADZ9VgT2VrJgiybsrS0+2xQmrPQkqG0I2u
+        bZAGDP7j9TaGS7CYl6m5mf8rBbCamWF2BmLuBj2QAwSeq1KQzPKIuEHXfJuE0Vin2yoO5khclOcLsuta
+        w26uACb4TgpG3GLtme9ogUFKjq7N3OjaoIB+5FQg3Rw5r/LImfbq6nlgoAsbxvo8j3Ctu1D6WpuOdQwg
+        WgoGhJze7GgeW7tJipPnlWlAZntwB0d+Blumd/ydldhntkpAtZBJBe94yUHerrW+CWbQBiVNBj+efVx4
+        Bo2XylSpiqrokUBKBm0AmbNOsecdoSjZBLCGbjK3ZWMO7Q3AM7M85kXZgee+p+nYaQywB2hQBu60A0AI
+        2kOnzzJ8oAa653c+gsaszwDQ2YDulWR4BkhelYxXsVj/WN4fG+854NlC+qeLnplkqQRkkGBHZhRIAO1k
+        0/C6M8vlbNL2zuZkoANu4B52IAFH3tgyLtBITZJQ+tYdudnIfPIqTwY4D3nCfQNwrYpCigRiHGE74OU6
+        UAZuLa5O/gkV7nhV4M1AxB/1xPHQvlb6M0vkrHcMDvZ7en0uX2uiQgOBgAZHB6RpBUlWDLYsPXmzrrQy
+        ja6TrtZ/DvZuitOuZd1CAJklPQVL+Vq0apESkANZmeiMPrjCbWuFZhREsPcEgAImcAA0IF8NMOYMngZp
+        AJnp6PJl8AhoYAc0QAh2oAM5sH1V/62YfYZIkAYUO+ld38/oWo5tYOO8/5WQ5+0q/yAEkVfSbV9kDCa+
+        AJ8DEtADi499nBm1Sl1vMBlQpPUDuqVWKKA2U0FFD1FkU+BOvQ+Zz08GAFHGTSA4BWlUIIMkTRI3Esjk
+        MbNkCRMmkyqCMYMECcQ8VDDmgWgGzCQwAPK0aZMmDZkkacyIzHNGRxKNO3ZMkQABjxsIbhpOOXMmB8sK
+        FXKciSglShRNmiaRbHImiQ4HDSJYmKBCRQUIDECciHPgBAqyHRpAkDCTTJqgZxSSEUhoDh84dtzMTJJT
+        x5mJFCk+dZoRqZkkZ0BSMaMGzMeUadrEdEzm5cszPSogIaMih4QeQe4ECYIGTQUdQ9PmbKDiTBO/k5Y2
+        ZdJkh/8KCREmYJ2Q+wEDDwdCoBgA3AQKBkUlJMmBmczyJGXKSHiEhlAg0Wga6uBaeMkkKVKYKI3yiYmZ
+        oFTyFI4JUY2Z9CgffzwJ8mUe7BGQ6OAcxE4gO9PR9JgCJ9DQoIEBC/iSqCJNpHgqttksiEArCVVA4QQD
+        cPBgAA0HQEAEBiCYqS0RycBPAgncQEORRzyhzicISENiO4qiAC8KNfJYLiiQlkMMpPRAAuCpTTYBI72X
+        qMirgpx6+Ew6QgoKpKcgKjyhQBYioGIJM5qYSMszqFBCiBsmiECHGyZUwQQEPDDhhOFoGMAEEV48TkcR
+        F2oOjzsewQOPR+64g6cXdSCjoqf/unttvSSSICMolsgw74wcgQRjE6ac2gSkwc6YoocXIYCBBRoKgoMG
+        K0HwDQfkbkAioiaaMGMIjYbYIYcbZoggwht2PVOFEzwQATgC5qThBBEqsECtLyVddLk0BLLDjj3/vAOC
+        0dJKwozvulOqu/GmYg6voJBIoseQwNCkk6WIzCONjTKaAlRQRy1oD1PhQKGQGgxAIYcqlLhCCSWO3GHW
+        2cjUitcJP7Qh2OA0NAAEBdCaaSiW8GuoDTbc2I86QO9AozgTy9WWQSiWimKSjI7LS4fShAJqPfZeGqkT
+        mzWJYqVGX0qjBxbgYEABGvzwAwWi6cAhhhoGeEACJShSI0wq/5D4wSYJclPBplp3nRCCDkaAkwHgDjjA
+        BJEZ1cjRqSRYCUWeQK7uQ2zzmAgK7paSYomY0ioRuRxomizwxTbBWRMij9sZRwlYQIEAFggggBMUOOGk
+        DrGschoKJtQYIgcVdJhg1wo6+EEIW3ntVSsG4ByABQg+QOEAQQ4wEDmNlhuKXLWwLUMHN+6w40OaMENC
+        jbsZrGg8KoyjM4kbklAipJfWU6zSTSbZpInmloOoCSFmCCJyTkw9mo4BCJAg6x3UGA8JFRSwQKsJGLBv
+        a+dT10oEE8qmoYAQXKjBAWoQhGTd4Ae8cllzXOYcuJiIJ2hggRtcMjWkMAEK3QHMJNZTlP8eyE0j0RMJ
+        AEoCBsWQZCRPaQISIDA8xCyBCmVQAORw4IfhDMAPNICAZqamBDAo4X29msGHhGCTHGzNVhMyASZC0AgC
+        oCATvnHBIFBQwF0tCj86cA7i8vIIjDGABRI4Q/uQQIXWPEUiUYOAAtBAgBeRSAkyM4NJAPCSp0xiCU0A
+        wxLO0IAH6EAjVKCCYcoAAwKYjQYoEIENKoAcISgBVkvIAQQo0EgnCEEFN8hBEXcghCF6bkIHGEQMYlAH
+        GtRgEJCoRAwQcJkd3MBMLjORc9yQRUH1ZGgQYAsVGkU37phxCWrQCAREQACJLbJ4k/HRYpSpMjKOZwk7
+        SCBL2IKEzUj/IAgTs03BkCCwV5khNxFwQiUFFqYhlo6TnNzBD7TSiBi4IAaD2EPSAHGJGtSBNAm0IixP
+        JIHn1PIODQABCu6iEJDwkEZMGAkwkWADELguO4fxURwXg1BlauuXEhnCBCjmMljiZ1E2GacSqPAqJVxN
+        BeEM5xA4KbAbbFJr6NzBO0VpCRoOAhCAOOXETIRFjLnhEY/wqZ+sVS0IQIAFZePnQ/IgMC35JSMe1QEE
+        bLBC80CkJCJUZkUtekeJCEECDOgj35jTyoG9cYg7oJUOVBCBGwxhCJU8pxCccEAitFRrNmmEIPQqiDoQ
+        YBCCqAROcdgQE50IqD716SOgg6I7cIUB/wZoRAiUVJi25IEJelOCmUQgAkYVpTAjBG1WF2OGN67nVVVo
+        AhVyQIHP6cAC2qRJwcjgyvS51gKyequs4ipXS7byB7+1yQ/2+tdCsOCvlaiEIPyAhp6c6Hd/asjvEruI
+        QDUEAicIJQEQAhEtkVYjaWGBCKZ2A7TkII4vAQBWRTIZjAxhnE1ALWpVQASRIuEGZpjaDtb2ItJA0wIt
+        1QgSsOAElb7UCerbARESpgJBMMLBggBEICAxCJsOIhIee+4dqOuT391BEYhIhCMc8QhPsaAGNWAAP9MQ
+        EjC5kiupSWcRJtYSNkhCDnIYyWJMoh78AqwJ7wXpwDRCnkASDwmz+f+BrG4w24QUIQtaoAQlnHAmuVaN
+        iEU8YIX12ggaCLAQhRhEIWggLQ9/DFAdRgMfDoEIRIxYUCaIgQEkKD0z+NcCMLLVBCgwsUeU4Q9pwKqO
+        afYS90rkx03oXMAEtgMlJEc5i9rmro4saVYVQQxaEAMWZoMrFQjhgL/9QSZ/wAhB/HUQXAYBCOAcgBjQ
+        YQ/8EY0iZK0IR6DhDnwwxJrb3CcI3CEQhThBBcqw4sTQpwKtVAE1fzuB3SjgDmVgQxqUOcerskcJSBgC
+        +wQ25ZDWqn7MQZtGxqQVo+4KC13YAgmw0KsL0OaSqNOKXikcAhywINUlKEEMPFAHP+zh1YEIBB//AI6G
+        aO1hLn3oQyIWQV3gEQeLLsGvBF57g9eqk2s6aEAD0ICHMuQhvSXxuEkogwQhXIEJjmzrOE2ngonjhzQ5
+        MN0QO+25JJAmAVjBQl1VMAMVCDMrC473IEJwAFR1AAUhMIAHJmYt6eyBD3ygQyH8wAd7BYIOc8g1iBVh
+        awgcEnEgycuuSuO5A57pBg2IoATYIIf0yuEx6e0eFTbphMuC9MeeDpOtXPsAth45nZYUKRWE4HcLvGDd
+        Z5KA57ICOr67TAWAiIMJNOSB8L7IBsBhEwpYYJ2ckK9x9vKDHQSO8D7YgUDBJtR9TATN1Jn9khHoQIof
+        cxI2sGH2bRDJGYRA/wQh3FEFKpfaON1qE79z8gacTOk5m6AGdV6y0y49YG5+LnkNoUDpDcBBCfSw2Q5s
+        NjgmMAEbK+CGCjRAAQzYw9Wd3oenDy0OaJhJiZAgAUyiacEPIAANAsXxP/yhDWx/DDMQAiqYK60YAjAB
+        kx9wAsEbQFlxgiVQgtLZJAfgrXASAlpxL88xu7hyqU0SgggIqOpTABEIgBIIDhGgAQJYARFggQ5gAS9i
+        gO6LPWSxABShgTnAQTrQwTpAg9OogLX6rRtIn4ThmueRAFMhuDvAA9vzuDYICkpygggoOU4CpAb4EgaU
+        qyEIGJIrndLhvbhyAkbbgRn4AQf4wg60iSFyAP9EGoEOWME3KIEQkMEOSIAOcBwGsIGgCZqzMD8G8MMX
+        fBEGMIg4QIGi6gHsoD8JQR0DUhgV6ICi4qcksD05kBSSe6t0AqQwCYopSAiSA8MrmI10wgIhwIJSJIJa
+        QT4q0IoM2CQsOysi4D0LyEMbsIHu8wAUiD0baMEOoAEP8UM/VIBg5MOiKqoG8EPigBxiUoCoKhPnIUKu
+        eTcEKg0l0YEpkMQ2yAEzIUDAO6ck6Lm7yIAiOMW5cwI1CEWbuIEFyIIj0DQx8UAV+AFYJIJ4DMJMSoId
+        kICMewAF6L4mMoGAYkEKSCNjPL9fBMaMgwCNExU8ZIAGEAEFaInYIhetwA//+0sYccuJolCSKUgDz8kB
+        tzqpc6oVFcqLBTCCItCBVtokNWDE3yqCDRiDNcCC0lGB0LEkbySCF4jJINQMmFOBBigKBlhBoyOLESAL
+        zDuBAWDBsyDGF4mACjg/oXlI0oALr0g1RLKKJSODv3meHBiYOosA10mnInKf9FGCMwiT41tATsqaM8EO
+        DjCCk7Sv9KkrBXC+GziCMQiDDVi3nbON5vsBMQgDLziCLphHnmul2IuAB9isxhSBFaBDFpDMDnBBFsjD
+        XwzGAknBDghGCNgBC0CVGDAB+rOANAoWsqCBs3AsO8yhr4qAMzwgHqKCIfgtuLKvnnslCzACEiABVgm1
+        /wkogrVSgJuzACLggDDQgr6sySMQwksSgywYgzHQgi4oQw3IDQpgAQpoAMp0TMhMgASQzPCkxctcHVOh
+        AVF5ABuQgB1ApAowAAPgm8KSEInLlTJxvDMporViK3N6QCWYjbi6pDvjGwXYAhvQACeYxxyYAU07Mq2o
+        AC7YAMN7gUuaAWZjLa0oTC/4gizogtxwAC5YAcmsQzdcwc1age+sQ8ukxaA5PxZQAFzkx+KwAZcRgQeo
+        gDahvxLBGgk5IKDTiiD0wht4gRc4viu4ghfYrWSzCddSABuwAAsQMFjcgQloR3TKM0uSkAmY0ggYwgl4
+        gQ14shu4gB64AAdwgMm0Af/ILNERONE6TIDxhFMbIIAHCK8PGc4yEYEI8CIP8EwuHUI0gcYfNaB0sisp
+        FZNOy5ovlDkiKphWSkl6PCApPCvfuoEqUEUJkUKtUSsKcAAVYM5csYIL6ADYUwAKoMzuE4ERaMPKtEwK
+        sIHvtIEHQDtalNUH4MwbUAAJSAAH6IAfNJGd4zmL1AqeQ50iyqS7IiIri7l2C64DssYDbKmscYAZ6MB5
+        NCC21Arb8DRQS7B43Iz6dIARmAAFONGqSIDN+gARiEzwnEzN40cbUIAHsNFg7ABcrcMKoIAKEMIJGMJg
+        tcisOB0izKRj1aS7qpqflEBYLLtN+i2tsKRdkUciOFb/T4PHek2nIOSVgqlP2OuAGTgTRvuBoSyLUw0v
+        FOhFzgzGeJVXC1jGCjiWfSyTq0mf9PFXNJkBj92VWunRS6qaga2Vu9IKQr0BeTzWzkmYBggdSC07CVyr
+        BPi0HODJdyOTXNk5LVWCk5ECCgiWBIhXBeAjpiwqrviUCojBD+iAHfgQWXUALuVSfh3WmpUftlowhbkB
+        2zCgUKuVgT07tlLYTwOuIQqdCNDAH21YjwVc51PERtyMMsWVCHAAJZiIJohCVJWBAngCBECAEzgBBBAL
+        NxmAFvDOhsG4B6gKBbAN2+BXmr3Zm5WQCq3JUUVczVi5XJkAezyiM/FGIbXO35rQ/xs4sKBNndyI1r/c
+        OQzwgRWIRvw5k7WdABhwgKTtlQkIrxEQgQH4ABBoQ8s0yFrdxxFoAAtwAHm1SzKRvsKSgNVdXTKZgQag
+        gAiZEFbxwBuggNDpyj91vhfIgBdYNtvQCjNFkwmNR/2kn5psN557AS89E3/tVNowEekjX4cMFqN00fGk
+        AD+EAaA00xG8AQZwgK44XQdO3fNF3xm4AJ5z3Ab+HCWFqQg4oEwykRd53yLQ316h3QRIjZrkUXWagBmQ
+        gE79Oa14AQ1YAA0g0rUdk1x53qol39PtPlVFAfCkgCiOYq9VWYecgKpoABtAXdoFYRFO304N1txwrdIw
+        2NqFx/9qog20MJEKCE54xFQJeV5+rdCklT60SF2EOWANMIIjmIAyxQCkzc4t3thcYQAnxkUWSAApTtkG
+        qApTdVwH4OCpBeHylb61UoHndV2OwtsigsWkvaQrlpAeOF9T7VT8kVvncxn1vZUdJhMLYGTU5dfyvYBc
+        sYHcKKq1fWQNMFMzdUgUMErKTOQoZtGUnRMz5eBBnmQQjgCem1byTRYVUKmqWbYJ2FlLBlZMhduaxB/n
+        a9jcwJWfg4BcUQAyMan6nB/QAR0IeWRe7kMWcGI6DOYKHuY6vGSvHWQu/iZYzhVcaV/pw4qUFJM8C53Y
+        BWMedl2aDNYx8dgJwZoh4l9QRhP/MoEB6ZtlJK5JEM64YGSAKObOX/5OKa7gYNTaCDA/BXjee87nbyIT
+        COC5Cr2AWXbg0jki952QBmi3Ssaa2RhWFUiAH54QnvOcCo0AGBi3bN05OK5P082KfI4AkXbVOkxVDWFB
+        FJViYOyA9g0aXL5nc5a+E17dt42AC0AYmaPpqsUVpZYf6dsVb65Jmt3hmvUk2NthYJ1jfv2BGQhnx20B
+        WM5n7ITqqPaBWwTmeAbGQp6fY97qjXXg5/Ximr3i5zUdqm3pCBCBEq7JCNCALfbkrOgA5gXWSm7LGeDV
+        ZT7quo6QqcXlrs7n7ltBpAQWOrxqkNZDs3CA9k3sxC4qPWPe/7dGXJJ26ebTTwwIgjAeUtp1X6xZvLRO
+        a/pdasUGYdp45MfuasymbKMcAA/wASDwAREw1ezMTmHeMwoYgbDc2Ly+bSTWqIzj12W+WU+qSQzAAIW+
+        bNI+3wnQgN0d6iT+OX4FHVgek7U14QiI4tPm4n1eK5tGYi7OAA3IgA5oAQ/Y3KQcAJKlRWEGxhUoP+aN
+        gKI673DG5Ye8Culb6OhtZnfz05klk/vW356DAQywDYTMDazAimx9aQw4adqdgQM+4LCGZQ2vaMflzQVg
+        gQ/QXB94mOyEYgv3WhHIOK2GgA4273veZQ91bptNYtd13LYl39wY0rZu3hkw6XHl66zIlf9ZTg0HvhoN
+        2ACsMb920+qnzJX7poAFyAACSAAP+IDqax1gtgEl50wOzutd5vCtdoALeHLjVmf3DVYSPu35PlOr4FdR
+        xprCquj5UQBkyZUKsI3GzXLntm8z3eEGgIHuW1sHUIAfv28NeAAN4AF39oAM0RA/pMzvluc9wyYzfXJi
+        vOdbzpVwNm8LSMTWvWKFzgofrg0yQUGEwRUTeemLJhMHAN8kRmIIMPSt/qbayOBRre321eXMNtNcCQAT
+        6ADrzXNcxMUQpUUFaME9W0xBx/Wm9HUolwDbxnXmDWr5mdabnWutXu9RV+P1Xl9Od+BcqQ3afV5j1M5M
+        52p2hoH6ZOT/Xe7giC9BdP0AYOENL3LBPUPZ8iNdiK93Xf/2XOkA5532cE4d0fZmb74Aq9jwDpY+fdJ3
+        pD3dp9T0rNFPcZa+Dl7ncNYoM70Akq/PWyZlM6WAAAiAerPeDDlXzoTX7XRVLPbah3d3YsR14y7ds3AA
+        rnC+PuZrfnbyjPveHEj5CWBfTs/0mi/4Pv7123Dcs3hK0n3yBKjPWQ7bosj6Jg0AAaiBYal4YGkYFzzX
+        NyXpqG9yiM/1YmT5e2ZfrA8dXEHa6a5t+pn5XU5r2xjtZY5xdU6fqU0Anv8Uvu7hh+fHfK4Kqr8KWjT6
+        Aphw66v4r+HFNtRO8wN7qff4Wz71H1fs/6bGgPYl4K5e+YbXKAoA+rC2zhfIcrmHEAfo9pknc8fNUzK5
+        gAp4adpdq44PVwowfl2u913++QQw+hhApA54dRnQPOqlQ0aWfbD3+F12XJN2AO6+5813AAxgcp7/ppe2
+        CiwXfrd/6Aj5AGgHiAkvJkRwoMFBhIQzCFIYgTBhhYQJNRB04ODBgwgXClrs6KBBA4QNWAQI4AKFCBQo
+        Tnjw0GFABxEKGjBQYBMkSI8ec7IQwQKCxAgSJEwgGkHBCKAEJSqg0CDC0ooUKDgQGEFFAxERLEwg2HWC
+        AxhPVQQtO7Fg14sKHHgY0CCBTpwWRwoIUGIACgMiPJzo2wFFg6Y0bf/elLtTAQQWDiNAAJpwaNGuIb8y
+        hho06gSsMRFapNAhZMKHZBV0oGpRxFODETSwPuiA60cKEVqMkKkhQwYNGOW+LVnCRAcEJ1CkQIA3wWDC
+        hQ3PdWqRwUWLjIsKTdtgacIHD81SdrDAIcUJOSV2VeG6wwqNnykoiIB7QoaOWx2YZs+goIYFCzZoUFCz
+        oAglBQBCByEUsNcAH3RgEwM1KYdTTh35Z5N2DjRmYVdQZahAhgVVAMEIFDh2GXYVVNUUQtglVFFCTwU1
+        1QStZWDBTFVdxNFcDmxAgn4aNNABARgo8EFJAgxAQAEBGHAAAgkkoMACDTZIGIQR7jYTYY0BZdRPVxSo
+        qEAFFYiYUGPkYfdUBRY8IFtBI07Q2AXSBYWBA7ltsEEGEyxAAXJU1agdBDpuwAGePxLgwQcfALAoo406
+        +iikkUo6KaWVWnoppo8GBAA7
+</value>
+  </data>
+  <data name="$this.Name">
+    <value>Form1</value>
+  </data>
+  <data name="btnReadResXUsingRM.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="$this.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResXUsingRM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="$this.AutoScrollMargin" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="btnChangeBg.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResXUsingRM.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>136, 128</value>
+  </data>
+  <data name="listBox1.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="listBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>648, 354</value>
+  </data>
+  <data name="btnChangeBg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="listBox1.Visible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Type">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listBox1.ToolTip">
+    <value />
+  </data>
+  <data name="btnReadResX.Visible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnReadResXUsingRM.Name">
+    <value>btnReadResXUsingRM</value>
+  </data>
+  <data name="btnReadResXUsingRM.TabIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnReadResXUsingRM.Type">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnChangeBg.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;listBox1.ZOrder">
+    <value>4</value>
+  </data>
+  <data name="pictureBox1.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.Text">
+    <value>Form1</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>PMingLiU, 11pt</value>
+  </data>
+  <data name="btnReadResX.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 32</value>
+  </data>
+  <data name="pictureBox1.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnChangeBg.Text">
+    <value>切換背景圖</value>
+  </data>
+  <data name="btnChangeBg.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="pictureBox1.Visible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>4</value>
+  </data>
+  <data name="btnReadResX.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Standard</value>
+  </data>
+  <data name="$this.Icon" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResX.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnChangeBg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name">
+    <value>pictureBox1</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="btnReadResXUsingRM.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>24, 248</value>
+  </data>
+  <data name="btnReadResXUsingRM.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="btnReadResX.ToolTip">
+    <value />
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnReadResXUsingRM.ZOrder">
+    <value>1</value>
+  </data>
+  <data name="btnReadResX.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnReadResXUsingRM.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Standard</value>
+  </data>
+  <data name="&gt;&gt;btnReadResX.Parent">
+    <value>$this</value>
+  </data>
+  <data name="btnChangeBg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>NoControl</value>
+  </data>
+  <data name="btnChangeBg.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 32</value>
+  </data>
+  <data name="btnChangeBg.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>24, 152</value>
+  </data>
+  <data name="btnReadResXUsingRM.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>272, 32</value>
+  </data>
+  <data name="btnChangeBg.ImageIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="btnReadResX.ImageIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="btnReadResX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent">
+    <value>$this</value>
+  </data>
+  <data name="btnChangeBg.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Standard</value>
+  </data>
+  <data name="btnChangeBg.ToolTip">
+    <value />
+  </data>
+  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>15</value>
+  </data>
+  <data name="btnReadResX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="listBox1.IntegralHeight" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnReadResX.Type">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnChangeBg.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="listBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="listBox1.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Normal</value>
+  </data>
+  <data name="&gt;&gt;btnReadResX.Name">
+    <value>btnReadResX</value>
+  </data>
+  <data name="btnChangeBg.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="btnReadResXUsingRM.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>312, 109</value>
+  </data>
+  <data name="btnReadResXUsingRM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="&gt;&gt;$this.Name">
+    <value>Form1</value>
+  </data>
+  <data name="listBox1.ScrollAlwaysVisible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="btnReadResXUsingRM.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>432, 48</value>
+  </data>
+  <data name="btnChangeBg.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.ToolTip">
+    <value />
+  </data>
+  <data name="btnReadResX.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnChangeBg.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="btnReadResX.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="listBox1.HorizontalScrollbar" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="btnReadResX.TabIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="btnReadResXUsingRM.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="pictureBox1.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnChangeBg.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnChangeBg.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResX.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResXUsingRM.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="pictureBox1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnChangeBg.Name">
+    <value>btnChangeBg</value>
+  </data>
+  <data name="btnReadResXUsingRM.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="btnReadResX.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;listBox1.Parent">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnReadResX.ZOrder">
+    <value>2</value>
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="btnReadResXUsingRM.Visible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="listBox1.HorizontalExtent" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="btnReadResXUsingRM.Text">
+    <value>讀取 .resx 資源，使用 ResourceManager</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Name">
+    <value>listBox1</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;btnChangeBg.Type">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox1.ToolTip">
+    <value />
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="btnReadResX.Text">
+    <value>讀取 .resx 資源</value>
+  </data>
+  <data name="toolTip1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </data>
+  <data name="pictureBox1.Text">
+    <value />
+  </data>
+  <data name="btnChangeBg.Visible" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="btnReadResXUsingRM.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResXUsingRM.ImageIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>WindowsDefaultLocation</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="listBox1.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>6, 18</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name">
+    <value>toolTip1</value>
+  </data>
+  <data name="btnChangeBg.TabIndex" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>1</value>
+  </data>
+  <data name="listBox1.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="btnReadResX.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>NoControl</value>
+  </data>
+  <data name="listBox1.ColumnWidth" type="System.Int32, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="listBox1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;btnChangeBg.Parent">
+    <value>$this</value>
+  </data>
+  <data name="$this.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnReadResXUsingRM.Parent">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnChangeBg.ZOrder">
+    <value>3</value>
+  </data>
+  <data name="btnReadResXUsingRM.ToolTip">
+    <value />
+  </data>
+  <data name="btnReadResX.Enabled" type="System.Boolean, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="btnReadResX.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>24, 200</value>
+  </data>
+  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="listBox1.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+</root>

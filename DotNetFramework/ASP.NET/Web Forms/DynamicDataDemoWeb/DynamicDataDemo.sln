@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DynamicDataDemoWeb", ".", "{130D4FB3-A140-4404-B462-2B300F6D3506}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/DynamicDataDemoWeb"
+		Debug.AspNetCompiler.PhysicalPath = "..\DynamicDataDemoWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DynamicDataDemoWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DynamicDataDemoWeb"
+		Release.AspNetCompiler.PhysicalPath = "..\DynamicDataDemoWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DynamicDataDemoWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3477"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{130D4FB3-A140-4404-B462-2B300F6D3506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130D4FB3-A140-4404-B462-2B300F6D3506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

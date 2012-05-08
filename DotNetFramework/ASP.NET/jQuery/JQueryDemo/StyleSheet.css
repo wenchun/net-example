@@ -1,0 +1,28 @@
+﻿body
+{
+}
+
+.PopupMenu
+{
+	border-style:solid;
+	border-width: 1px;
+	border-color: #ddd;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.PopupMenu li
+{
+	width: 150px;
+	background: #EBEBEB;
+	margin: 1px 0 0 1px;
+	height: 20px;
+	padding: 4px;
+	float: none;
+}
+
+.PopupMenu li:hover
+{ 
+	background: #FFFFCC;
+	color: black;
+}

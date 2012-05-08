@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="8626a3db-9ef3-47d0-b97c-75c745bbd6f9" name="線上購物" linkedPackageId="0a94f428-c518-4e67-9e56-877e1f243cf9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d4760232-1f06-4759-beb5-614747255b9f">
+      <profileInstance Id="8c881118-c1fc-4cec-9a04-43ab5c020d25" name="CSharpProfile">
+        <elementDefinition Id="4623a5c8-ef40-43cb-8b56-c0d7aca0b7e7" />
+      </profileInstance>
+      <elementDefinition Id="22f599e4-c26a-463e-87be-6c4698e5e5a6" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="a460cb34-ae12-4cfc-95dc-23d226e6f537" name="線上購物" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="eb1ce5e5-895c-4021-9edc-0c4e2f645733" />
+        <nodes>
+          <initialNode Id="41ff0a13-8cb6-4926-9711-f86c38102358" name="Initial1" isLeaf="false">
+            <elementDefinition Id="fd3795e0-acf2-4908-b775-60f1e25924a8" />
+            <flowNodeTargets>
+              <controlFlow Id="f4563a38-5398-40ba-9a8d-28f25434225d" isLeaf="false">
+                <opaqueActionMoniker Id="da0243eb-8e4e-40f2-9df4-360a2087eb19" LastKnownName="瀏覽商品" />
+                <elementDefinition Id="4b1765fd-409b-447f-b921-18f17e359eff" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="da0243eb-8e4e-40f2-9df4-360a2087eb19" name="瀏覽商品" isLeaf="false">
+            <elementDefinition Id="9ae267bf-aa87-4e75-bad2-8ba06951906a" />
+            <flowNodeTargets>
+              <controlFlow Id="d18f4424-5cf8-440e-99e2-105c1f0787de" isLeaf="false">
+                <opaqueActionMoniker Id="a62e34b4-bb80-4f3e-98ea-687dff432651" LastKnownName="加入購物車" />
+                <elementDefinition Id="d8877300-e430-45d5-a584-8f67fbe01138" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a62e34b4-bb80-4f3e-98ea-687dff432651" name="加入購物車" isLeaf="false">
+            <elementDefinition Id="53928fe4-734b-47e7-8598-9d70737611f7" />
+            <flowNodeTargets>
+              <controlFlow Id="67ae3144-c679-483d-8cea-a524bc3304bb" isLeaf="false">
+                <decisionNodeMoniker Id="34a098d5-1f8d-4687-817d-72ebcc01d840" LastKnownName="Decision1" />
+                <elementDefinition Id="1b0cd462-8c9b-4adc-912d-80353cfc362f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d8bd1b97-8152-48db-bf68-24be7f791679" name="結帳" isLeaf="false">
+            <elementDefinition Id="1ff107e5-6a0d-491e-8be8-55467f157271" />
+            <flowNodeTargets>
+              <controlFlow Id="8ce30801-f8bd-497a-b329-2b7731886a20" isLeaf="false">
+                <opaqueActionMoniker Id="225d0cf4-51a7-4b89-b141-fdd228a21982" LastKnownName="處理訂單" />
+                <elementDefinition Id="b6b7b581-283e-404a-a5c3-cc8a9372069e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="34a098d5-1f8d-4687-817d-72ebcc01d840" name="Decision1" isLeaf="false">
+            <elementDefinition Id="a91532d7-be9f-4f4f-a89e-6608ad700d4d" />
+            <flowNodeTargets>
+              <controlFlow Id="e0719c37-070a-48c2-9b22-d3a144cc0545" guard="還要逛" isLeaf="false">
+                <opaqueActionMoniker Id="da0243eb-8e4e-40f2-9df4-360a2087eb19" LastKnownName="瀏覽商品" />
+                <elementDefinition Id="0028ec11-ab77-4e3e-938c-d0c7af49d365" />
+              </controlFlow>
+              <controlFlow Id="5b73321e-5089-40ab-be33-2783f78dacd5" guard="結帳去" isLeaf="false">
+                <opaqueActionMoniker Id="d8bd1b97-8152-48db-bf68-24be7f791679" LastKnownName="結帳" />
+                <elementDefinition Id="7ad530c8-d3f7-42db-8c88-e4a61ea57cf8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode Id="88303588-b862-43f7-b556-c01414d9dd0a" name="顧客" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="16836e24-61d7-4844-9217-3203fbc2b714" />
+            <upperBound>
+              <literalInteger Id="a74dcbda-ca18-4395-b452-9bd4db7f4971" name="2147483647" value="2147483647">
+                <elementDefinition Id="d0a11a6a-6898-4556-9ec3-348c91715b27" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <activityFinalNode Id="3a1b41ff-2107-4705-8081-13ab5d13e61f" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="12180ba5-ecee-4a49-ac4e-da00bcead3b9" />
+          </activityFinalNode>
+          <objectNode Id="cb4f7dca-4fa5-4b9d-9b93-ed6b7d80a451" name="管理員" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="6ede7da7-5384-4829-acb2-dd0bde8c0c48" />
+            <upperBound>
+              <literalInteger Id="f43dca99-8b0e-41fe-a9a1-7c5cc6ca128f" name="2147483647" value="2147483647">
+                <elementDefinition Id="38f98f40-e405-4b4c-ac6c-55d9efb33862" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="225d0cf4-51a7-4b89-b141-fdd228a21982" name="處理訂單" isLeaf="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b90479e9-f16a-4451-8f39-f460df39ca94" name="HumanTask" profile="MyUmlProfile">
+                <elementDefinition Id="7e7430fd-3c2d-4430-bded-a4e17ecd5b75" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="65dc4a87-1ed9-4078-925d-9b9fb0602622" />
+            <flowNodeTargets>
+              <controlFlow Id="d0b2e1b4-8fd0-4fe6-9081-04f7e5ecc864" isLeaf="false">
+                <activityFinalNodeMoniker Id="3a1b41ff-2107-4705-8081-13ab5d13e61f" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="5a52b21c-3ee9-47f7-b79d-aed1fff600f9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="0a94f428-c518-4e67-9e56-877e1f243cf9" name="NorthwindModel">
+    <elementDefinition Id="9636b560-34d1-4b78-95b9-fd7807afa217" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7afe8079-da48-44ae-a872-e5ffc88e98eb">
+        <profileInstance Id="a009a0e6-452c-4073-baca-dc80ed52a0c0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7de2955a-8ef7-4ccb-8e7c-ad018ac49aa6">
+        <profileInstance Id="ee29625b-68a1-407c-b1fd-0819de1dc8a0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="82af4fc3-3439-4e91-ad65-f3cd146ae583">
+        <profileInstance Id="89fe5883-2d41-4de1-99ad-3571338d093b" name="MyUmlProfile">
+          <elementDefinition Id="3489878a-3679-4fc8-b0ae-e90865c29e4f" />
+        </profileInstance>
+        <elementDefinition Id="d01e91ea-6ace-474e-8000-83477190bad7" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

@@ -1,0 +1,630 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>GenerateXml.js</title>
+</head>
+
+<body style="font-family: Verdana">
+
+<h2>GenerateXml.js</h2>
+<h3>簡介</h3>
+<p>提供一些工具函式，用來抓取網頁元素並產生異動資料的 XML 字串。</p>
+<h3>函式清單</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" width="100%" id="table1">
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#ClearText">ClearText</a></td>
+    <td>清除物件的值。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#LazyGet">LazyGet</a></td>
+    <td>搜尋網頁元素，把符合搜尋條件的欄位名稱與欄位值取出組成資料異動的 XML 字串。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#LazyGetUpdate">LazyGetUpdate</a></td>
+    <td>作用與 LazyGet 相同，但是多一個參數可指定 where 條件，適合用來 Update 資料。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#GetCheckValue">GetCheckValue</a></td>
+    <td>傳入 HTML 物件名稱，，取 checkbox 的值。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#GetRadioValue">GetRadioValue</a></td>
+    <td>傳入 HTML 物件名稱，取 radio button 的值。</td>
+  </tr>
+  <tr> 
+    <td>　</td>
+    <td><a href="#IsObject">IsObject</a></td>
+    <td>判斷傳入的名稱是否為一個 HTML 物件。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#GetRadioValueXML">GetRadioValueXML</a></td>
+    <td>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得Radio資料異動的XML字串。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#">GetRadioValue2XML</a></td>
+    <td>傳入表格名稱、寫入欄位、欄位內容、代碼內容、BlockNo等資料，取得Radio資料異動的XML字串。</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td><a href="#GetCheckValueXML">GetCheckValueXML</a></td>
+    <td>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得checkBox資料異動的XML字串。</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td><a href="#">GetCheckValue2XML</a></td>
+    <td>傳入表格名稱、寫入欄位、欄位內容、代碼內容、BlockNo等資料，取得checkBox資料異動的XML字串。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#PutCheckValue">PutCheckValue</a></td>
+    <td>將表格的資料顯示於畫面對應的HTML Check 物件內。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#PutCheckValue2Screen">PutCheckValue2Screen</a></td>
+    <td>將表格的資料顯示於畫面對應的HTML Check 物件內。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#PutComboValue2Screen">PutComboValue2Screen</a></td>
+    <td>將表格的資料顯示於畫面對應的HTML Combo物件內。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#PutRadioValue">PutRadioValue</a></td>
+    <td>將表格的資料顯示於畫面對應的HTML Radio物件內。</td>
+  </tr>
+  <tr> 
+    <td width="17">　</td>
+    <td width="154"><a href="#">PutRadioValue2Screen</a></td>
+    <td>?將表格的資料顯示於畫面對應的HTML Radio物件內。</td>
+  </tr>
+</table>
+<p>　</p>
+<hr>
+<h3><a name="LazyGet">LazyGet</a></h3>
+<blockquote>
+  <p>搜尋網頁元素，把符合搜尋條件的欄位名稱與欄位值取出組成資料異動的 XML 字串。</p>
+  <p>function LazyGet(table_name, key_word, sql_status, current_page)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table3">
+  <tr>
+    <td width="127" valign="top">table_name</td>
+    <td>欲異動的資料表名稱。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">key_word</td>
+    <td>HTML 元素名稱的前置字元，以此字串為首的 HTML 元素會被此函式找到，並且取出其欄位名稱與欄位值。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">sql_status</td>
+    <td>SQL 異動的類型：<p>I: Insert (with creator, creatdt)<br>
+    I2: Insert (without creator, creatdt)<br>
+    U: Update (with updator, updatdt)<br>
+    U2: Update (without updator, updatdt)<br>
+    D: Delete</p>
+    <p>若您的 table 沒有建檔者與建檔日期欄位，請使用 I2 與 U2。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">current_page</td>
+    <td>第幾頁，適用於多頁夾的情形。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>SQL commands in XML format.</p>
+<h4>注意</h4>
+<p>Update 時，請改用 LazyGetUpdate()。</p>
+<h4>備註</h4>
+<p>資料庫的系統時間指令：</p>
+<ul>
+  <li>Oracle - SYSDATE</li>
+  <li>DB2 - CURRENT TIMESTAMP</li>
+</ul>
+<p><font color="#FF00FF">,$$</font> 為一組分隔識別，讓 XML parser 
+可以知道如何將串在一起的欄位值分割成多個欄位。注意不可改成 &quot;, $$&quot;。</p>
+<hr>
+<h3><a name="LazyGetUpdate">LazyGetUpdate</a></h3>
+<blockquote>
+  <p>作用與 LazyGet 相同，但是多一個參數可指定 where 條件，適合用來 Update 資料。</p>
+  <p>function LazyGetUpdate(table_name, key_word, sql_status, current_page, 
+  user_where)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table4">
+  <tr>
+    <td width="127" valign="top">table_name</td>
+    <td>欲異動的資料表名稱。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">key_word</td>
+    <td>HTML 元素名稱的前置字元，以此字串為首的 HTML 元素會被此函式找到，並且取出其欄位名稱與欄位值。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">sql_status</td>
+    <td>SQL 異動的類型：<p>I: Insert (with creator, creatdt)<br>
+    I2: Insert (without creator, creatdt)<br>
+    U: Update (with updator, updatdt)<br>
+    U2: Update (without updator, updatdt)<br>
+    D: Delete</p>
+    <p>若您的 table 沒有建檔者與建檔日期欄位，請使用 I2 與 U2。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">current_page</td>
+    <td>第幾頁，適用於多頁夾的情形。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">user_where</td>
+    <td>SQL 的 where 條件。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>SQL commands in XML format.</p>
+<hr>
+<h3><a name="GetRadioValue">GetRadioValue</a></h3>
+<blockquote>
+  <p>傳入 HTML 物件名稱，取 radio button 的值。</p>
+  <p>function GetRadioValue(objName)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table5">
+  <tr>
+    <td width="127" valign="top">objName</td>
+    <td>HTML 物件名稱。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>Radio button 的值。</p>
+<hr>
+<h3><a name="GetCheckValue">GetCheckValue</a></h3>
+<blockquote>
+  <p>傳入 HTML 物件名稱，取 checkbox 的值。</p>
+  <p>function GetCheckValue(objName)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table6">
+  <tr>
+    <td width="127" valign="top">objName</td>
+    <td>HTML 物件名稱。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>Checkbox 的值。</p>
+<hr>
+<h3><a name="IsObject">IsObject</a></h3>
+<blockquote>
+  <p>判斷傳入的名稱是否為一個 HTML 物件。</p>
+  <p>function IsObject(objName)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table7">
+  <tr>
+    <td width="127" valign="top">objName</td>
+    <td>HTML 物件名稱。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>True/False。</p>
+<hr>
+<h3><a name="ClearText">ClearText</a></h3>
+<blockquote>
+  <p>清除物件的值。</p>
+  <p>function ClearText(objname)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr>
+    <td width="127" valign="top">objName</td>
+    <td>HTML 物件名稱。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>無。</p>
+<hr>
+<p>&nbsp;</p>
+<h3><a name="GetRadioValueXML"></a>GetRadioValueXML</h3>
+<blockquote> 
+  <p>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得Radio資料異動的XML字串。</p>
+  <p>GetRadioValueXML(table_name, column_name, column_value, obj_name, gcode)</p>
+  </blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td valign="top">table_name</td>
+    <td>要存取的表格名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">column_name</td>
+    <td>寫入的欄位名稱，欄位以逗號區隔( code_no不須寫 ) 。格式：column_name=&quot;app_date, paper_no, 
+      block_no, detail_no&quot; </td>
+  </tr>
+  <tr> 
+    <td valign="top"> column_value</td>
+    <td>欄位輸入值，不同欄位以 &quot;<strong>,$$</strong>&quot;區隔。 <br>
+      格式： column_value=&quot;TimeStamp('2004-01-01 00:00:00') ,$$ 9401000011 ,$$ 
+      111 ,$$ 1 &quot;;</td>
+  </tr>
+  <tr> 
+    <td valign="top"> obj_name</td>
+    <td>HTML物件名稱。 </td>
+  </tr>
+  <tr> 
+    <td width="127" valign="top">gcode</td>
+    <td>物件CODE_NO。 ex. 2001000</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>回傳資料異動的XML字串。</p>
+<p>XML格式：</p>
+<p> <font color="#333333">&lt;Package&gt;&lt;work_id&gt;D&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;Wxx_Apply_C&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;column_name&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;block_no=111 and code_no between 2001001 and 2001999 &lt;/where&gt;<br>
+  &lt;values&gt;&lt;/values&gt;&lt;/Package&gt;<br>
+  &lt;Package&gt;&lt;work_id&gt;I&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;<em>Wxx_Apply_C</em>&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;<em>column_name</em>&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;&lt;/where&gt;<br>
+  &lt;values&gt;<em>values</em>&lt;/values&gt;&lt;/Package&gt; </font></p>
+<p>XML字串中會先刪除前次新增內容，如果有多選則會有多個新增XML</p>
+<h4>範例</h4>
+<p>var str1 = GetRadioValueXML(&quot;W00_APPLY_C&quot;,column_name,column_value,&quot;rdo1111019000&quot;, 
+  1019000);</p>
+<hr>
+<h3><a name="GetRadioValue2XML"></a>GetRadioValue2XML</h3>
+<blockquote> 
+  <p>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得Radio資料異動的XML字串。</p>
+  <p>用法同GetRadioValueXML，須多傳blockNo。</p>
+  <p>GetRadioValue2XML(table_name, column_name, column_value, obj_name, gcode, 
+    blockNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">table_name</td>
+    <td>要存取的表格名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">column_name</td>
+    <td>寫入的欄位名稱，欄位以逗號區隔( code_no不須寫 ) 。格式：column_name=&quot;app_date, paper_no, 
+      block_no, detail_no&quot; </td>
+  </tr>
+  <tr> 
+    <td valign="top"> column_value</td>
+    <td>欄位輸入值，不同欄位以 &quot;<strong>,$$</strong>&quot;區隔。 <br>
+      格式： column_value=&quot;TimeStamp('2004-01-01 00:00:00') ,$$ 9401000011 ,$$ 
+      111 ,$$ 1 &quot;;</td>
+  </tr>
+  <tr> 
+    <td valign="top"> obj_name</td>
+    <td>HTML物件名稱。 </td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode</td>
+    <td>物件CODE_NO。 ex. 2001000</td>
+  </tr>
+  <tr> 
+    <td valign="top">blockNo</td>
+    <td>區塊代碼。(codeDisplay產生畫面時傳入的blockno)</td>
+  </tr>
+</table>
+<p>&nbsp;</p><h4>傳回值</h4>
+<p>回傳資料異動的XML字串。</p>
+<p>XML格式：</p>
+<p> <font color="#333333">&lt;Package&gt;&lt;work_id&gt;D&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;Wxx_Apply_C&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;column_name&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;block_no=111 and code_no between 2001001 and 2001999 &lt;/where&gt;<br>
+  &lt;values&gt;&lt;/values&gt;&lt;/Package&gt;<br>
+  &lt;Package&gt;&lt;work_id&gt;I&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;<em>Wxx_Apply_C</em>&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;<em>column_name</em>&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;&lt;/where&gt;<br>
+  &lt;values&gt;<em>values</em>&lt;/values&gt;&lt;/Package&gt; </font></p>
+<p>XML字串中會先刪除前次新增內容，如果有多選則會有多個新增XML</p>
+<h4>範例</h4>
+<p>var str1 = GetRadioValue2XML(&quot;W00_APPLY_C&quot;,column_name,column_value,&quot;rdo1111019000&quot;, 
+  1019000, <strong>111</strong> );</p>
+<hr>
+<h3><a name="GetCheckValueXML" id="GetCheckValueXML"></a>GetCheckValueXML</h3>
+<blockquote> 
+  <p>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得Radio資料異動的XML字串。</p>
+  <p>GetCheckValueXML(table_name, column_name, column_value, obj_name, gcode)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td valign="top">table_name</td>
+    <td>要存取的表格名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">column_name</td>
+    <td>寫入的欄位名稱，欄位以逗號區隔( code_no不須寫 ) 。格式：column_name=&quot;app_date, paper_no, 
+      block_no, detail_no&quot; </td>
+  </tr>
+  <tr> 
+    <td valign="top"> column_value</td>
+    <td>欄位輸入值，不同欄位以 &quot;<strong>,$$</strong>&quot;區隔。
+	<br>
+      格式： column_value=&quot;TimeStamp('2004-01-01 00:00:00') ,$$ 9401000011 ,$$ 
+      111 ,$$ 1 &quot;;</td>
+  </tr>
+  <tr> 
+    <td valign="top"> obj_name</td>
+    <td>HTML物件名稱。 </td>
+  </tr>
+  <tr> 
+    <td width="127" valign="top">gcode</td>
+    <td>物件CODE_NO。 ex. 2001000</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>回傳資料異動的XML字串。</p>
+<p>XML格式：</p>
+<p> <font color="#333333">&lt;Package&gt;&lt;work_id&gt;D&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;Wxx_Apply_C&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;column_name&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;block_no=111 and code_no between 2001001 and 2001999 &lt;/where&gt;<br>
+  &lt;values&gt;&lt;/values&gt;&lt;/Package&gt;<br>
+  &lt;Package&gt;&lt;work_id&gt;I&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;<em>Wxx_Apply_C</em>&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;<em>column_name</em>&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;&lt;/where&gt;<br>
+  &lt;values&gt;<em>values</em>&lt;/values&gt;&lt;/Package&gt; </font></p>
+<p>XML字串中會先刪除前次新增內容，如果有多選則會有多個新增XML</p>
+<h4>範例</h4>
+<p>var str1 = GetCheckValueXML(&quot;W00_APPLY_C&quot;,column_name,column_value,&quot;chk1111019000&quot;, 
+  1019000);</p>
+<hr>
+<h3><a name="GetCheckValue2XML" id="GetCheckValue2XML"></a>GetCheckValue2XML</h3>
+<blockquote> 
+  <p>傳入表格名稱、寫入欄位、欄位內容、代碼內容等資料，取得Radio資料異動的XML字串。</p>
+  <p>用法同GetRadioValueXML，須多傳blockNo。</p>
+  <p>GetCheckValue2XML(table_name, column_name, column_value, obj_name, gcode, 
+    blockNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">table_name</td>
+    <td>要存取的表格名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">column_name</td>
+    <td>寫入的欄位名稱，欄位以逗號區隔( code_no不須寫 ) 。格式：column_name=&quot;app_date, paper_no, 
+      block_no, detail_no&quot; </td>
+  </tr>
+  <tr> 
+    <td valign="top"> column_value</td>
+    <td>欄位輸入值，不同欄位以 &quot;<strong>,$$</strong>&quot;區隔。 <br>
+      格式： column_value=&quot;TimeStamp('2004-01-01 00:00:00') ,$$ 9401000011 ,$$ 
+      111 ,$$ 1 &quot;;</td>
+  </tr>
+  <tr> 
+    <td valign="top"> obj_name</td>
+    <td>HTML物件名稱。 </td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode</td>
+    <td>物件CODE_NO。 ex. 2001000</td>
+  </tr>
+  <tr> 
+    <td valign="top">blockNo</td>
+    <td>區塊代碼。(codeDisplay產生畫面時傳入的blockno)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p>回傳資料異動的XML字串。</p>
+<p>XML格式：</p>
+<p> <font color="#333333">&lt;Package&gt;&lt;work_id&gt;D&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;Wxx_Apply_C&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;column_name&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;block_no=111 and code_no between 2001001 and 2001999 &lt;/where&gt;<br>
+  &lt;values&gt;&lt;/values&gt;&lt;/Package&gt;<br>
+  &lt;Package&gt;&lt;work_id&gt;I&lt;/work_id&gt;&lt;gcode_stat&gt;0&lt;/gcode_stat&gt;<br>
+  &lt;table_name&gt;<em>Wxx_Apply_C</em>&lt;/table_name&gt;<br>
+  &lt;col_namev&gt;<em>column_name</em>&lt;/col_namev&gt;&quot;;<br>
+  &lt;where&gt;&lt;/where&gt;<br>
+  &lt;values&gt;<em>values</em>&lt;/values&gt;&lt;/Package&gt; </font></p>
+<p>XML字串中會先刪除前次新增內容，如果有多選則會有多個新增XML</p>
+<h4>範例</h4>
+<p>var str1 = GetCheckValue2XML(&quot;W00_APPLY_C&quot;,column_name,column_value,&quot;rdo1111019000&quot;, 
+  1019000, <strong>111</strong> );</p>
+<hr>
+<h3><a name="PutCheckValue"></a>PutCheckValue</h3>
+<blockquote> 
+  <p>將表格的資料顯示於畫面對應的HTML Check 物件內。</p>
+  <p>如果同一畫面內存在同一編號的物件多個( 同 Code_No 不同 blockNo )，請改用PutCheckValue2Screen。</p>
+  <p>function PutCheckValue(objName, gcode_val)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">objName</td>
+    <td>HTML物件名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode_val</td>
+    <td>表格內的值，多筆時用 &quot;<strong>,$$</strong>&quot; 區隔。格式為：&quot;codeno,blockno 
+      note &quot; ex: (1001005長子,$$ 1001010,$$ )</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p><font color="#333333">無。</font></p>
+<h4>範例</h4>
+<p>//查詢網頁<br>
+  sql = &quot; select Rtrim(cast(codeno as char(10))) as codeno,NOTE from W00_PEOPLE_C 
+  where IDNO='' &quot;;<br>
+  for (int j = 0; j &lt; rowsDetail.size(); j++) {<br>
+  readerDetail.setRow((HashMap) rowsDetail.get(j)); <br>
+  gcode_val = gcode_val + readerDetail.getString(&quot;CODENO&quot;) + &quot;&quot; 
+  + readerDetail.getString(&quot;NOTE&quot;) + &quot; ,$$&quot;;<br>
+  } </p>
+<p>//html<br>
+  PutCheckValue(&quot;chk1111011000&quot;, gcode_val); </p>
+<hr>
+<h3><a name="PutCheckValue2Screen"></a>PutCheckValue2Screen</h3>
+<blockquote> 
+  <p>將表格的資料顯示於畫面對應的HTML Check 物件內。</p>
+  <p>function PutCheckValue2Screen(obj_name,gcode_val,blockNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">objName</td>
+    <td>HTML物件名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode_val</td>
+    <td>表格內的值，多筆時用 &quot;<strong>,$$</strong>&quot; 區隔。格式為：&quot;codeno,blockno 
+      note &quot; ex: (1001005,111長子,$$ 1001010,222,$$ )</td>
+  </tr>
+  <tr> 
+    <td valign="top">blockNo</td>
+    <td>區塊代碼。(codeDisplay產生畫面時傳入的blockno)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p><font color="#333333">無。</font></p>
+<h4>範例</h4>
+<p>//查詢網頁<br>
+  sql = &quot; select Rtrim(cast(codeno as char(10)))||','||Rtrim(cast(block_no 
+  as char(10))) as codeno, &quot; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ "NOTE from W00_PEOPLE_C where IDNO='' &quot;;<br><br>
+  for (int j = 0; j &lt; rowsDetail.size(); j++) {<br>
+  reader.setRow((HashMap) rowsDetail.get(j)); <br>
+  gcode_val = gcode_val + reader.getString(&quot;CODENO&quot;) + &quot;&quot; 
+  + reader.getString(&quot;NOTE&quot;) + &quot; ,$$&quot;;<br>
+  } </p>
+<p>//html<br>
+  PutCheckValue2Screen(&quot;chk1111011000&quot;, gcode_val, blockno ); </p>
+<hr>
+<h3><a name="PutRadioValue"></a>PutRadioValue</h3>
+<blockquote> 
+  <p>將表格的資料顯示於畫面對應的HTML Radio 物件內。</p>
+  <p>如果同一畫面內存在同一編號的物件多個( 同 Code_No 不同 blockNo )，請改用PutRadioValue2Screen。</p>
+  <p>function PutRadioValue(objName, gcode_val)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">objName</td>
+    <td>HTML物件名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode_val</td>
+    <td>表格內的值，多筆時用 &quot;<strong>,$$</strong>&quot; 區隔。格式為：&quot;codeno,blockno 
+      note &quot; ex: (1001005長子,$$ 1001010,$$ )</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p><font color="#333333">無。</font></p>
+<h4>範例</h4>
+<p>//查詢網頁<br>
+  sql = &quot; select Rtrim(cast(codeno as char(10))) as codeno,NOTE from W00_PEOPLE_C 
+  where IDNO='' &quot;;<br>
+  for (int j = 0; j &lt; rowsDetail.size(); j++) {<br>
+  readerDetail.setRow((HashMap) rowsDetail.get(j)); <br>
+  gcode_val = gcode_val + readerDetail.getString(&quot;CODENO&quot;) + &quot;&quot; 
+  + readerDetail.getString(&quot;NOTE&quot;) + &quot; ,$$&quot;;<br>
+  } </p>
+<p>//html<br>
+  PutRadioValue(&quot;chk1111011000&quot;, gcode_val); </p>
+<hr>
+<h3><a name="PutRadioValue2Screen" id="PutRadioValue2Screen"></a>PutRadioValue2Screen</h3>
+<blockquote> 
+  <p>將表格的資料顯示於畫面對應的HTML Check 物件內。</p>
+  <p>function PutRadioValue2Screen(obj_name,gcode_val,blockNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">objName</td>
+    <td>HTML物件名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode_val</td>
+    <td>表格內的值，多筆時用 &quot;<strong>,$$</strong>&quot; 區隔。格式為：&quot;codeno,blockno 
+      note &quot; ex: (1001005,111長子,$$ 1001010,222,$$ )</td>
+  </tr>
+  <tr> 
+    <td valign="top">blockNo</td>
+    <td>區塊代碼。(codeDisplay產生畫面時傳入的blockno)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p><font color="#333333">無。</font></p>
+<h4>範例</h4>
+<p>//查詢網頁<br>
+  sql = &quot; select Rtrim(cast(codeno as char(10)))||','||Rtrim(cast(block_no 
+  as char(10))) as codeno, &quot; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ "NOTE from W00_PEOPLE_C where 
+  IDNO='' &quot;;<br>
+  for (int j = 0; j &lt; rows.size(); j++) {<br>
+ &nbsp;&nbsp;reader.setRow((HashMap) rows.get(j)); <br>
+  &nbsp;&nbsp;gcode_val = gcode_val + reader.getString(&quot;CODENO&quot;) + &quot;&quot; 
+  + reader.getString(&quot;NOTE&quot;) + &quot; ,$$&quot;;<br>
+  } </p>
+<p>//html<br>
+  PutRadioValue2Screen(&quot;chk1111011000&quot;, gcode_val, blockno ); </p>
+<hr>
+<h3><a name="PutComboValue2Screen"></a>PutComboValue2Screen</h3>
+<blockquote> 
+  <p>將表格的資料顯示於畫面對應的HTML Check 物件內。</p>
+  <p>function PutComboValue2Screen(obj_name,gcode_val,blockNo)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr> 
+    <td width="127" valign="top">objName</td>
+    <td>HTML物件名稱。</td>
+  </tr>
+  <tr> 
+    <td valign="top">gcode_val</td>
+    <td>表格內的值，多筆時用 &quot;<strong>,$$</strong>&quot; 區隔。格式為：&quot;codeno,blockno 
+      note &quot; ex: (1001005,111長子,$$ 1001010,222,$$ )</td>
+  </tr>
+  <tr> 
+    <td valign="top">blockNo</td>
+    <td>區塊代碼。(codeDisplay產生畫面時傳入的blockno)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h4>傳回值</h4>
+<p><font color="#333333">無。</font></p>
+<h4>範例</h4>
+<p>//查詢網頁<br>
+  sql = &quot; select Rtrim(cast(codeno as char(10)))||','||Rtrim(cast(block_no 
+  as char(10))) as codeno, &quot; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ "NOTE from W00_PEOPLE_C where 
+  IDNO='' &quot;;<br>
+  for (int j = 0; j &lt; rowsDetail.size(); j++) {<br>
+  &nbsp;&nbsp;readerDetail.setRow((HashMap) rowsDetail.get(j)); <br>
+  &nbsp;&nbsp;gcode_val = gcode_val + readerDetail.getString(&quot;CODENO&quot;) 
+  + &quot;&quot; + readerDetail.getString(&quot;NOTE&quot;) + &quot; ,$$&quot;;<br>
+  } </p>
+<p>//html<br>
+  PutComboValue2Screen(&quot;chk1111011000&quot;, gcode_val, blockno ); </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profile dslVersion="1.0.0.0" 
+       name="MyUmlProfile" displayName="My UML Profile" 
+       xmlns="http://schemas.microsoft.com/UML2.1.2/ProfileDefinition">
+  <stereotypes></stereotypes>
+  <metaclasses></metaclasses>
+  <propertyTypes></propertyTypes>
+</profile>

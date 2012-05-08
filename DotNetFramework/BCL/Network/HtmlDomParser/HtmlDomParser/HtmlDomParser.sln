@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlDomParser", "HtmlDomParser.csproj", "{03FC7A03-CE77-4B98-B3B4-B64980B0A16F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{03FC7A03-CE77-4B98-B3B4-B64980B0A16F}.Debug.ActiveCfg = Debug|.NET
+		{03FC7A03-CE77-4B98-B3B4-B64980B0A16F}.Debug.Build.0 = Debug|.NET
+		{03FC7A03-CE77-4B98-B3B4-B64980B0A16F}.Release.ActiveCfg = Release|.NET
+		{03FC7A03-CE77-4B98-B3B4-B64980B0A16F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

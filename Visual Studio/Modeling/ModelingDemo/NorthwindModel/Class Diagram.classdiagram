@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a3febb87-c1db-4f89-8d1c-0cad415ba777" name="類別圖" linkedPackageId="9c78a264-eeff-4088-a406-ca13aeb9aeb7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="839647f1-ebb8-4990-aa34-2a4849d95cd1">
+      <elementDefinition Id="71195971-b04d-48ab-90da-6087f6bb602b" />
+      <body>VIP 會員購物享八五折優惠。</body>
+      <annotatedElements>
+        <classMoniker Id="d7f67538-b039-48fd-85e5-ba6d333394a0" LastKnownName="VIP" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="ed9f50b3-65fd-4efc-bdf8-8d46e7284346">
+      <profileInstance Id="f6895e0d-9642-46bc-9e94-7e4f3a190d87" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="45651be7-7d46-4d26-b8f2-c6fa5487f707">
+      <profileInstance Id="2f172a96-b1dd-4f45-84d5-62bc2f76fc3c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8db49a3f-44f1-42f1-8434-5bc23cc3238b">
+      <profileInstance Id="fe8273cc-3eac-4d3c-a5dd-7c45c02f511c" name="MyUmlProfile">
+        <elementDefinition Id="3489878a-3679-4fc8-b0ae-e90865c29e4f" />
+      </profileInstance>
+      <elementDefinition Id="d01e91ea-6ace-474e-8000-83477190bad7" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="45a7496d-90d4-4182-b9af-a94afe0422d2">
+      <profileInstance Id="f2444fdb-dc30-4e0e-8fc5-bb81cbb56d79" name="CSharpProfile">
+        <elementDefinition Id="4623a5c8-ef40-43cb-8b56-c0d7aca0b7e7" />
+      </profileInstance>
+      <elementDefinition Id="22f599e4-c26a-463e-87be-6c4698e5e5a6" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="78e5ffbe-e676-4080-a632-518e30cfe784" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4a63ae86-70c1-4715-9b85-92250a0506c8" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9db5b31e-ba1f-4138-a761-78295f8ec130" name="Customer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c9917e7c-cac8-4ae1-b3a4-0a36a796a956" />
+        <targetEnds>
+          <association Id="c2d12f91-19da-44ab-8bec-678226e5ea37" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Cart" isLeaf="false" isAbstract="false">
+            <classMoniker Id="09e026fd-9f2a-4e20-afe2-d8b9870cd539" LastKnownName="Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ce82f2c-d6d5-4d00-a557-900ab374d511" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f79c19b-b769-48ad-92cd-2fbe1c3070ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00c58b13-306c-4961-95c0-37bc842258eb" name="Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="231ce179-66d2-4e67-b9e4-e2c8a747ca8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="425e0787-bd3f-49cc-b201-94d11f133761" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="92e660e2-4a05-4af0-b762-958d95679201" name="Order" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d387c9cc-8dca-46c3-a571-9b18efc80b8d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="09e026fd-9f2a-4e20-afe2-d8b9870cd539" name="Cart" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="154c7237-50bf-49ff-9b29-8e240158da72" />
+        <targetEnds>
+          <association Id="b49f0f74-927a-4982-aa5a-c47e6ed78684" isDerived="false" sourceEndRoleName="Cart" targetEndRoleName="Product" isLeaf="false" isAbstract="false">
+            <classMoniker Id="78e5ffbe-e676-4080-a632-518e30cfe784" LastKnownName="Product" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66a19dd7-c12d-4b86-931b-8a039b50cfcd" name="Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8299c2c3-dc82-41b4-9199-a85d8439a7c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ce1a43e-42c0-4801-9319-692800aeb125" name="Product" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="0317cd3e-9d73-42d7-b7de-cf0176046909" name="Lower" value="*">
+                      <elementDefinition Id="dba0cf12-7832-498f-bb12-8dfa73d02d1e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1bd859b6-a218-4699-ad75-d7966d4a144c" name="Upper" value="*">
+                      <elementDefinition Id="52cf4138-6990-4293-aaf7-6cc1e3b15531" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2733c462-67ba-404d-8a49-b50ab7453676" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a58bdf4f-e77c-4d19-b834-5775448b8676" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="07cb4ce2-d948-420c-b832-da2422e5ff39" name="Items" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="83e64036-f9df-4336-b36c-661a9884f312" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="0af04c00-1133-4d9f-a34c-28fd26836c60" name="AddItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55f518dd-03a8-42c7-9e12-59bac78c7beb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3f9096f0-c7c7-4211-aea7-9d9395e1819d" name="Product aProduct" direction="In" isUnique="false">
+                  <elementDefinition Id="429a0905-6d01-45eb-b8fc-d3b771bd0ebe" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e8ece5c6-7d6f-4083-ad43-e24d153a765a" name="RemoveItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f73ce3d-679d-4d4f-a604-bdfe5ac9c0d5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b4dc605a-aacb-48ad-89d2-6a7f6e03bcab" name="Product aProduct)" direction="In" isUnique="false">
+                  <elementDefinition Id="aafb2364-17af-452e-a511-1ca4bdc564f7" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f4788272-f987-41f2-ac50-41d3ce5b2c5e" name="OrderDetail" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d1564309-3b0b-4411-8b8c-1106c15c91b7" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d7f67538-b039-48fd-85e5-ba6d333394a0" name="VIP" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d33de04-21e6-4a1f-b9a9-5abe0eb7b365" />
+        <generalsInternal>
+          <generalization Id="6c326956-77d3-48d3-a939-d790054669b9" isSubstitutable="false">
+            <classMoniker Id="9db5b31e-ba1f-4138-a761-78295f8ec130" LastKnownName="Customer" />
+            <elementDefinition Id="e934ff15-4e40-4983-9841-c00c5b71a437" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="9c78a264-eeff-4088-a406-ca13aeb9aeb7" name="NorthwindModel">
+    <elementDefinition Id="9636b560-34d1-4b78-95b9-fd7807afa217" />
+  </package>
+</logicalClassDesignerModel>

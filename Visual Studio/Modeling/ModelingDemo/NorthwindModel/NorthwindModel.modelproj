@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8a7e7499-0ce5-4058-89d5-db3dcb947b1c}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>NorthwindModel</Name>
+    <RootNamespace>NorthwindModel</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="ModelDefinition\Package_2108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="使用案例描述-線上購物.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="活動圖.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="活動圖.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>活動圖.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="使用案例圖.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="使用案例圖.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>使用案例圖.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="MVC.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MVC.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MVC.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="類別圖.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="類別圖.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>類別圖.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\NorthwindModel.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="類別圖">
+  <logicalClassDesignerModelMoniker Id="07c1aa7c-78a9-4bd1-bb9a-0311eff71028" />
+  <nestedChildShapes>
+    <classShape Id="3017238a-4064-40af-afb6-2c91eeff7e03" absoluteBounds="3.625, 3.375, 1.5, 1.0276793744166692" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="1d747041-4e20-43f8-8e7a-55316db8fdb3" LastKnownName="Account" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="90526b75-c27b-4513-ad6b-d8f121dc982e" absoluteBounds="3.6399999999999997, 3.8903356393178306, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="28b8aeb8-1099-4add-9947-4b8da8fb4477" absoluteBounds="3.6399999999999997, 4.10150750686725, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d28f809-ec11-4060-84e7-8a6f5c7538fa" absoluteBounds="1.5, 3.375, 1.5, 1.0276793744166692" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="f78c530a-451a-43a1-9f3b-9a00d8adf406" LastKnownName="LoginPage" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="5a9992b3-d8bd-4daf-8af2-ff7db2f57065" absoluteBounds="1.5150000000000001, 3.8903356393178306, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="84ff011a-babb-4560-8fc2-ea8081c0747d" absoluteBounds="1.5150000000000001, 4.10150750686725, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <dependencyConnector edgePoints="[(3 : 3.88883968720833); (3.625 : 3.88883968720833)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="1ea73b3c-8ebe-4064-b283-56e0f5244e22" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="0d28f809-ec11-4060-84e7-8a6f5c7538fa" />
+        <classShapeMoniker Id="3017238a-4064-40af-afb6-2c91eeff7e03" />
+      </nodes>
+    </dependencyConnector>
+    <classShape Id="dd2a0be1-2b5d-4402-80f7-876414aad570" absoluteBounds="2.5, 1.875, 1.5, 1.0276793744166692" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="4b83e45a-336d-4c92-9947-916355f8a334" LastKnownName="LoginController" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="a2f0e0c8-d20a-43f8-b436-b39eb1870e44" absoluteBounds="2.515, 2.3903356393178306, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="fadc979d-904a-4f50-afbf-7a4fa44f46a9" absoluteBounds="2.515, 2.6015075068672497, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <dependencyConnector edgePoints="[(2.5 : 2.31354574913984); (1.9999995 : 2.31354574913984); (1.9999995 : 3.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="62f4bd68-ceed-4ff4-8730-665018de24d3" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="dd2a0be1-2b5d-4402-80f7-876414aad570" />
+        <classShapeMoniker Id="0d28f809-ec11-4060-84e7-8a6f5c7538fa" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(4 : 2.33333333333333); (4.5625005 : 2.33333333333333); (4.5625005 : 3.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="56aa23e7-aad9-4214-8cff-1f3123d519e9" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="dd2a0be1-2b5d-4402-80f7-876414aad570" />
+        <classShapeMoniker Id="3017238a-4064-40af-afb6-2c91eeff7e03" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

@@ -1,0 +1,9 @@
+﻿<Window x:Class="Wpf101Demo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Hello, WPF!" Height="300" Width="300" ButtonBase.Click="DemoButton_Click">
+    <Grid>
+        <Button Height="54" Margin="25,12,0,0" Name="DemoButton" VerticalAlignment="Top" HorizontalAlignment="Left" Width="78">Button</Button>
+        <Button Height="54" Margin="123,69,77,0" Name="button1" VerticalAlignment="Top">Button</Button>
+    </Grid>
+</Window>

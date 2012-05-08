@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneInstanceApp", "OneInstanceApp.csproj", "{889BD658-2A93-4B5C-B663-A9F1B204B680}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{889BD658-2A93-4B5C-B663-A9F1B204B680}.Debug.ActiveCfg = Debug|.NET
+		{889BD658-2A93-4B5C-B663-A9F1B204B680}.Debug.Build.0 = Debug|.NET
+		{889BD658-2A93-4B5C-B663-A9F1B204B680}.Release.ActiveCfg = Release|.NET
+		{889BD658-2A93-4B5C-B663-A9F1B204B680}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

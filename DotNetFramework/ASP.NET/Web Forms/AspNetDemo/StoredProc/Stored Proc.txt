@@ -1,0 +1,25 @@
+/* 傳回所有客戶資料: 使用 Command.ExecuteReader() */
+create procedure GetCustomers
+as
+	select * from Customers
+return
+
+/* 傳回客戶資料筆數: 使用 Command.ExecuteScalar() */
+create procedure GetCustomerCount
+as
+	select count(*) from Customers
+return
+
+/* 修改客戶的 Country 欄位: 使用 Command.ExecuteNonQuery() */
+ALTER PROCEDURE dbo.ChangeCustomerCountry
+AS
+	update Customers set Country='美國' where Country='USA'
+RETURN 
+
+/* 用來測試有傳回值的預儲程序 */
+ALTER PROCEDURE dbo.AddTen
+(
+	@Number int
+)
+AS
+RETURN @Number + 10

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollingLogFileDemo", "RollingLogFileDemo\RollingLogFileDemo.csproj", "{DCC092D1-8C8B-4F5E-97FC-23CF10918BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogToEmailDemo", "LogToEmailDemo\LogToEmailDemo.csproj", "{C69116B3-A18C-4EAB-8B1A-57FE98B828D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyListener", "MyListener\MyListener.csproj", "{27C132ED-5BF9-4CFF-8FE0-BCD77D5DFBA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsEventLogDemo", "WindowsEventLogDemo\WindowsEventLogDemo.csproj", "{80142180-ABED-440B-B6B5-4B36FDD4089D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LogDemoWeb", "LogDemoWeb\", "{50CDD562-D875-4C70-AA22-1519EF4C2043}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/LogDemoWeb"
+		Debug.AspNetCompiler.PhysicalPath = "LogDemoWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LogDemoWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LogDemoWeb"
+		Release.AspNetCompiler.PhysicalPath = "LogDemoWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LogDemoWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4619"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC092D1-8C8B-4F5E-97FC-23CF10918BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC092D1-8C8B-4F5E-97FC-23CF10918BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC092D1-8C8B-4F5E-97FC-23CF10918BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC092D1-8C8B-4F5E-97FC-23CF10918BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69116B3-A18C-4EAB-8B1A-57FE98B828D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69116B3-A18C-4EAB-8B1A-57FE98B828D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69116B3-A18C-4EAB-8B1A-57FE98B828D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69116B3-A18C-4EAB-8B1A-57FE98B828D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C132ED-5BF9-4CFF-8FE0-BCD77D5DFBA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C132ED-5BF9-4CFF-8FE0-BCD77D5DFBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C132ED-5BF9-4CFF-8FE0-BCD77D5DFBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C132ED-5BF9-4CFF-8FE0-BCD77D5DFBA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80142180-ABED-440B-B6B5-4B36FDD4089D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80142180-ABED-440B-B6B5-4B36FDD4089D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80142180-ABED-440B-B6B5-4B36FDD4089D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80142180-ABED-440B-B6B5-4B36FDD4089D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50CDD562-D875-4C70-AA22-1519EF4C2043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50CDD562-D875-4C70-AA22-1519EF4C2043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50CDD562-D875-4C70-AA22-1519EF4C2043}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{50CDD562-D875-4C70-AA22-1519EF4C2043}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

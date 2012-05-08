@@ -1,0 +1,457 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>DateUtil.js</title>
+</head>
+
+<body style="font-family: Verdana">
+
+<h2>DateUtil.js</h2>
+<h3>簡介</h3>
+<p>日期工具函式。</p>
+<h3>函式清單</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" width="100%" id="table1">
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#clacAge">calcAge</a></td>
+    <td>計算年齡，算實歲，精確到日。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#calcAgeByMonth">calcAgeByMonth</a></td>
+    <td>計算年齡，精確到月。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#calcAgeByYear">calcAgeByYear</a></td>
+    <td>計算年齡，精確到年。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#checkDateFields">checkDateFields</a></td>
+    <td>傳入年、月、日的 HTML tag 物件進行日期檢查。年份為西元年。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#checkDateStr">checkDateStr</a></td>
+    <td>檢查輸入的字串是否為合法的日期字串，傳回 true/false。日期格式為: yyyy/mm/dd 或 
+    yyyy-mm-dd，月和日的位數可以不用補 0。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#cvtYearC2W">cvtYearC2W</a></td>
+    <td>民國年轉換到西元年。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#cvtYearW2C">cvtYearW2C</a></td>
+    <td>西元年轉換到民國年。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#encodeDateStr">encodeDateStr</a></td>
+    <td>將傳入的參數組成日期字串。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#getMaxDay">getMaxDay</a></td>
+    <td>傳回指定年月的最大天數。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#getToday">getToday</a></td>
+    <td>取得今日日期，並將年、月、日、星期幾存入陣列中傳回。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#halfROC2Date">halfROC2Date</a></td>
+    <td>將民國曆的日期轉成「數字的」日期字串，例如： 民國93年3月10日轉2004/03/10 。 </td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#isLeapYear">isLeapYear</a></td>
+    <td>檢查傳入的年份是否為閏年。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#isDate">isDate</a></td>
+    <td>檢查輸入的字串是否為合法的日期字串，傳回 true/false。日期格式為: yyyy/mm/dd 或 
+    yyyy-mm-dd，月和日的位數可以不用補 0。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#isEmptyDate">isEmptyDate</a></td>
+    <td>檢查日期字串是否為空的日期。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#isRocDate">isRocDate</a></td>
+    <td>檢查輸入的字串是否為合法的中華民國日期字串，傳回 true/false。日期格式為: eee/mm/dd 或 
+    eee-mm-dd，年月日的位數可以不用補 0。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#splitDateToObj">splitDateToObj</a></td>
+    <td>把輸入的 dtstr 日期字串，解析出年月日的字串，分別塞到指定的年、月、日欄位中。</td>
+  </tr>
+  <tr>
+    <td width="17">　</td>
+    <td width="154" valign="top"><a href="#splitDateToObj2">splitDateToObj2</a></td>
+    <td>把輸入的 dtstr 日期字串，解析出年月日的字串，分別塞到指定的年、月、日欄位中，此函式支援民國前的年份。</td>
+  </tr>
+  </table>
+<p>　</p>
+<hr>
+<h3><a name="halfROC2Date">halfROC2Date</a></h3>
+<blockquote>
+  <p>將民國曆的日期轉成「數字的」日期字串，例如： 民國93年3月10日轉2004/03/10 。 </p>
+  <p>function halfROC2Date(aDate, sep)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table3">
+  <tr>
+    <td width="127" valign="top">aDate</td>
+    <td>民國年的日期字串。例如：民國93年3月10日。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">sep</td>
+    <td>日期分隔字元，用於傳回值。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>西元年的日期字串。</p>
+<hr>
+<h3><a name="clacAge">clacAge</a></h3>
+<blockquote>
+  <p>計算年齡。日期分隔字元同時支援 '/' 與 '-'。</p>
+  <p>function calcAge(sBirthday)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table4">
+  <tr>
+    <td width="127" valign="top">sBirthday</td>
+    <td>出生日期。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>年齡。</p>
+<h4>範例</h4>
+<p>calcAge(&quot;1984/03/20&quot;);<br>
+　</p>
+<p>　</p>
+<hr>
+<h3><a name="calcAgeByMonth">calcAgeByMonth</a></h3>
+<blockquote>
+  <p>計算年齡，精確到月。日期分隔字元同時支援 '/' 與 '-'。</p>
+  <p>function calcAgeByMonth(sBirthday)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table5">
+  <tr>
+    <td width="127" valign="top">sBirthday</td>
+    <td>出生日期字串，西元年。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>年齡。</p>
+<h4>範例</h4>
+<p>calcAge(&quot;1984/03/20&quot;);</p>
+<hr>
+<h3><a name="calcAgeByYear">calcAgeByYear</a></h3>
+<blockquote>
+  <p>計算年齡，精確到年。日期分隔字元同時支援 '/' 與 '-'。</p>
+  <p>function calcAgeByYear(sBirthday)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table6">
+  <tr>
+    <td width="127" valign="top">sBirthday</td>
+    <td>出生日期字串，西元年。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>年齡。</p>
+<h4>範例</h4>
+<p>calcAge(&quot;1984/03/20&quot;);</p>
+<hr>
+<h3><a name="isLeapYear">isLeapYear</a></h3>
+<blockquote>
+  <p>檢查傳入的年份是否為閏年。</p>
+  <p>function isLeapYear(year)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table7">
+  <tr>
+    <td width="127" valign="top">year</td>
+    <td>西元年。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>Boolean 型態。</p>
+<p>　</p>
+<hr>
+<h3><a name="getMaxDay">getMaxDay</a></h3>
+<blockquote>
+  <p>傳回指定年月的最大天數。</p>
+  <p>function getMaxDay(year, month)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table8">
+  <tr>
+    <td width="127" valign="top">year</td>
+    <td>西元年。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">month</td>
+    <td>月份。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>整數。</p>
+<hr>
+<h3><a name="isDate">isDate</a></h3>
+<blockquote>
+  <p>檢查輸入的字串是否為合法的日期字串，傳回 true/false。日期格式為: yyyy/mm/dd 或 yyyy-mm-dd，月和日的位數可以不用補 
+  0。</p>
+  <p>function isDate(dtStr)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table9">
+  <tr>
+    <td width="127" valign="top">dtStr</td>
+    <td>日期字串，例如：2004/04/12。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>Boolean 型態。</p>
+<h4>相關函式</h4>
+<p><a href="#checkDateStr">checkDateStr</a>()</p>
+<p>　</p>
+<hr>
+<h3><a name="isRocDate">isRocDate</a></h3>
+<blockquote>
+  <p>檢查輸入的字串是否為合法的中華民國日期字串，傳回 true/false。日期格式為: eee/mm/dd 或 
+  eee-mm-dd，年月日的位數可以不用補 0。</p>
+  <p>function isDate(dtStr)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table10">
+  <tr>
+    <td width="127" valign="top">dtStr</td>
+    <td>日期字串，例如：093/04/12。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>Boolean 型態。</p>
+<hr>
+<h3><a name="checkDateStr">checkDateStr</a></h3>
+<blockquote>
+  <p>檢查輸入的字串是否為合法的日期字串。日期格式為: yyyy/mm/dd 或 yyyy-mm-dd，月和日的位數可以不用補 0。</p>
+  <p>function isDate(dtStr)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table11">
+  <tr>
+    <td width="127" valign="top">dtStr</td>
+    <td>日期字串，例如：2004/04/12。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>字串。若為合法日期，則傳回空字串，否則傳回錯誤訊息。</p>
+<p>　</p>
+<hr>
+<h3><a name="isEmptyDate">isEmptyDate</a></h3>
+<blockquote>
+  <p>檢查日期字串是否為空的日期。</p>
+  <p>function isEmptyDate(dateStr)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table12">
+  <tr>
+    <td width="127" valign="top">dtStr</td>
+    <td>日期字串，例如：2004/04/12。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>Boolean 型態。</p>
+<hr>
+<h3><a name="checkDateFields">checkDateFields</a></h3>
+<blockquote>
+  <p>傳入年、月、日的 HTML tag 物件進行日期檢查。年份為西元年。</p>
+  <p>function checkDateFields(year, month, day, allowEmptyFields)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table13">
+  <tr>
+    <td width="127" valign="top">dtStr</td>
+    <td>日期字串，例如：2004/04/12。</td>
+  </tr>
+</table>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table18">
+  <tr>
+    <td width="145" valign="top">year</td>
+    <td>西元年。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">month</td>
+    <td>月。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">day</td>
+    <td>日。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">allowEmptyFields</td>
+    <td>此旗號可控制不要檢查的欄位（即可不輸入的欄位），如果為空字串，表示年月日都要輸入，若為 &quot;YMD&quot; 則表示年、月、和日可以不輸入；&quot;YM&quot; 
+    則是年和月可不輸入，以此類推。 可控制不要檢查的欄位，如果為空字串，表示年月日都要檢查，若為 &quot;MD&quot; 則表示月和日不要檢查，以此類推。注意：若為 
+    &quot;YMD&quot;，但是 year, month, 和 day 其中<br>
+    有任何一個欄位有值的話，程式還是會檢查日期的合法性（例如：4 月只有 30 天）。而 year, month, day 
+    三者均有值時，allowEmptyFields 無作用，也就是一定會檢查日期是否合法。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>若日期正確，則傳回空字串；若日期不合法，則傳回錯誤訊息字串。 </p>
+<hr>
+<h3><a name="splitDateToObj">splitDateToObj</a></h3>
+<blockquote>
+  <p>把輸入的 dtstr 日期字串，解析出年月日的字串，分別塞到 objYear, objMonth, 和 objDay 物件的 value 屬性。</p>
+  <p>function splitDateToObj(dtStr, objYear, objMonth, objDay)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table22">
+  <tr>
+    <td width="145" valign="top">dtStr</td>
+    <td>日期字串（西元年）。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objYear</td>
+    <td>儲存年份的 HTML 欄位。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objMonth</td>
+    <td>儲存月的 HTML 欄位。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objDay</td>
+    <td>儲存日的 HTML 欄位。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>無。</p>
+<p>　</p>
+<hr>
+<h3><a name="splitDateToObj2">splitDateToObj2</a></h3>
+<blockquote>
+  <p>把輸入的 dtstr 日期字串，解析出年月日的字串，分別塞到指定的年、月、日欄位中，此函式支援民國前的年份。</p>
+  <p>function splitDateToObj2(dtStr, chkBeforeYear, objYear, objMonth, objDay)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table23">
+  <tr>
+    <td width="145" valign="top">dtStr</td>
+    <td>日期字串（西元年）。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">chkBeforeYear</td>
+    <td>&quot;民國前&quot;的 checkbox 欄位。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objYear</td>
+    <td>儲存年份的 HTML 欄位。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objMonth</td>
+    <td>儲存月的 HTML 欄位。</td>
+  </tr>
+  <tr>
+    <td width="145" valign="top">objDay</td>
+    <td>儲存日的 HTML 欄位。</td>
+  </tr>
+</table>
+<h4>傳回值</h4>
+<p>無。</p>
+<hr>
+<h3><a name="cvtYearC2W">cvtYearC2W</a></h3>
+<blockquote>
+  <p>民國年轉換到西元年。</p>
+  <p>function cvtYearC2W(year)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table24">
+  <tr>
+    <td width="127" valign="top">year</td>
+    <td>民國年。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>整數，西元年。</p>
+<hr>
+<h3><a name="cvtYearW2C">cvtYearW2C</a></h3>
+<blockquote>
+  <p>西元年轉換到民國年。</p>
+  <p>function cvtYearW2C(year)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table25">
+  <tr>
+    <td width="127" valign="top">year</td>
+    <td>西元年。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>整數，民國年。</p>
+<hr>
+<h3><a name="encodeDateStr">encodeDateStr</a></h3>
+<blockquote>
+  <p>將傳入的參數組成日期字串。</p>
+  <p>function encodeDateStr(before, year, month, day)</p>
+</blockquote>
+<p><b>參數</b></p>
+<table border="0" cellpadding="5" style="border-collapse: collapse" width="100%" id="table26">
+  <tr>
+    <td width="127" valign="top">before</td>
+    <td>true=民國前。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">year</td>
+    <td>民國年。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">month</td>
+    <td>月。</td>
+  </tr>
+  <tr>
+    <td width="127" valign="top">day</td>
+    <td>日。</td>
+  </tr>
+  </table>
+<h4>傳回值</h4>
+<p>日期字串。</p>
+<h4>範例</h4>
+<p>var s1 = encodeDateStr(false, &quot;93&quot;, &quot;1&quot;, &quot;2&quot;); // s1 = &quot;2004-1-2&quot;<br>
+var s2 = encodeDateStr(true, &quot;1&quot;, &quot;1&quot;, &quot;2&quot;); // s2 = &quot;1911-1-2&quot;</p>
+<hr>
+<h3><a name="getToday">getToday</a></h3>
+<blockquote>
+  <p>取得今日日期，並將年、月、日、星期幾存入陣列中傳回。</p>
+  <p>function getToday()</p>
+</blockquote>
+<p><b>參數</b></p>
+<p>無。</p>
+<h4>傳回值</h4>
+<p>陣列：</p>
+<blockquote>
+  <p>[0] : 年 (民國 e.g., 094) 。<br>
+  [1] : 月 (實際月份 e.g., 05) 。<br>
+  [2] : 日。<br>
+  [3] : 星期幾 。<br>
+　</p>
+</blockquote>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CrudDemo", "CrudDemo.vbproj", "{7158CE33-3FF9-407C-A827-5FCD6FB2F20E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7158CE33-3FF9-407C-A827-5FCD6FB2F20E}.Debug.ActiveCfg = Debug|.NET
+		{7158CE33-3FF9-407C-A827-5FCD6FB2F20E}.Debug.Build.0 = Debug|.NET
+		{7158CE33-3FF9-407C-A827-5FCD6FB2F20E}.Release.ActiveCfg = Release|.NET
+		{7158CE33-3FF9-407C-A827-5FCD6FB2F20E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

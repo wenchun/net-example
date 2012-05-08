@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaskedTextBox", "MaskedTextBox.csproj", "{E1E21A79-2970-4EE0-BB2C-3D88FE588C7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E1E21A79-2970-4EE0-BB2C-3D88FE588C7E}.Debug.ActiveCfg = Debug|.NET
+		{E1E21A79-2970-4EE0-BB2C-3D88FE588C7E}.Debug.Build.0 = Debug|.NET
+		{E1E21A79-2970-4EE0-BB2C-3D88FE588C7E}.Release.ActiveCfg = Release|.NET
+		{E1E21A79-2970-4EE0-BB2C-3D88FE588C7E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
